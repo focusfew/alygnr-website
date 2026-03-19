@@ -80,7 +80,7 @@ export default function ValueProps() {
 
 const section: React.CSSProperties = {
   background: 'var(--cream)',
-  padding: '112px 24px',
+  padding: '15px 24px',
   textAlign: 'center',
 };
 
@@ -100,7 +100,7 @@ const subhead: React.CSSProperties = {
   color: 'var(--text-secondary-light)',
   lineHeight: 1.7,
   maxWidth: 560,
-  margin: '0 auto 64px',
+  margin: '0 auto 44px',
 };
 
 const grid: React.CSSProperties = {

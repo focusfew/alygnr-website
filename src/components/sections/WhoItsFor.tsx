@@ -85,7 +85,7 @@ export default function WhoItsFor() {
 
 const section: React.CSSProperties = {
   background: 'var(--cream)',
-  padding: '112px 24px',
+  padding: '56px 24px',
   textAlign: 'center',
 };
 
@@ -95,7 +95,7 @@ const headline: React.CSSProperties = {
   color: 'var(--text-primary-light)',
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  margin: '0 auto 64px',
+  margin: '0 auto 32px',
   maxWidth: 720,
 };
 

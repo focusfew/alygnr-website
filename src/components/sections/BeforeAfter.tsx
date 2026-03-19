@@ -68,15 +68,11 @@ export default function BeforeAfter() {
           {/* data rows */}
           {rows.map((row, i) => {
             const isLast = i === rows.length - 1;
-            const rowBg = isLast
-              ? 'var(--dark)'
-              : i % 2 === 0
-                ? 'var(--black)'
-                : 'var(--dark)';
-            const cellPad = isLast ? '28px 28px' : '20px 28px';
-            const rightSize = isLast ? 20 : 16;
+            const rowBg = 'var(--black)';
+            const cellPad = '14px 28px';
+            const rightSize = 16;
             const rightWeight = isLast ? 600 : 400;
-            const leftSize = isLast ? 20 : 16;
+            const leftSize = 16;
             const leftWeight = isLast ? 600 : 400;
 
             return (
@@ -98,6 +94,7 @@ export default function BeforeAfter() {
                     color: 'var(--text-secondary-dark)',
                     lineHeight: 1.6,
                     borderRight: '1px solid rgba(255,255,255,0.07)',
+                    borderBottom: '1px solid rgba(255,255,255,0.07)',
                   }}
                 >
                   {row.left}
@@ -114,6 +111,7 @@ export default function BeforeAfter() {
                     display: 'flex',
                     alignItems: 'start',
                     gap: 10,
+                    borderBottom: '1px solid rgba(255,255,255,0.07)',
                   }}
                 >
                   <span style={orangeDot} />
@@ -140,7 +138,7 @@ export default function BeforeAfter() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '112px 24px',
+  padding: '56px 24px',
 };
 
 const container: React.CSSProperties = {
@@ -155,7 +153,7 @@ const headline: React.CSSProperties = {
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
   color: '#fff',
-  margin: '0 0 64px',
+  margin: '0 0 40px',
 };
 
 const tableWrap: React.CSSProperties = {

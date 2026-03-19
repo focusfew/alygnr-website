@@ -68,7 +68,7 @@ export default function Trust() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '80px 24px',
+  padding: '40px 24px',
 };
 
 const grid: React.CSSProperties = {
@@ -102,10 +102,10 @@ const decorQuote: React.CSSProperties = {
 
 const quoteText: React.CSSProperties = {
   fontFamily: "'Inter Tight', sans-serif",
-  fontSize: 22,
+  fontSize: 18,
   fontStyle: 'italic',
   color: 'var(--text-primary-dark)',
-  lineHeight: 1.7,
+  lineHeight: 1.6,
   margin: 0,
   position: 'relative',
 };
