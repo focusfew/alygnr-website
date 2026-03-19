@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 
 const STAGGER_MS = 120;
-const ELEMENT_COUNT = 6;
 
 export default function Hero() {
   const els = useRef<(HTMLElement | null)[]>([]);
