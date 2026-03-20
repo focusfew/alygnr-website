@@ -5,14 +5,14 @@ import SectionWrapper from '../../layout/SectionWrapper';
 const cards = [
   {
     headline: 'Messaging that drifts.',
-    body: 'Every brief rewrites the positioning. There's no source of truth to inherit from.',
+    body: `Every brief rewrites the positioning. There's no source of truth to inherit from.`,
   },
   {
     headline: 'Campaigns that reset.',
     body: 'Each cycle starts from zero. Nothing from last quarter informs this quarter.',
   },
   {
-    headline: 'Results you can't learn from.',
+    headline: `Results you can't learn from.`,
     body: 'Performance data lives in five tools. None of it connects back to what you decided.',
   },
 ] as const;
