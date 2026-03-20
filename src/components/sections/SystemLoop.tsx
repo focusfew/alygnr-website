@@ -15,28 +15,8 @@ export default function SystemLoop() {
         {/* ── left column ── */}
         <div>
           {/* eyebrow */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 10,
-            marginBottom: 24,
-          }}>
-            <span style={{
-              display: 'inline-block',
-              width: 2,
-              height: 16,
-              backgroundColor: 'var(--orange)',
-              flexShrink: 0,
-            }} />
-            <span style={{
-              fontSize: 11,
-              fontWeight: 500,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase' as const,
-              color: 'var(--orange)',
-              lineHeight: '16px',
-            }}>HOW ALYGNR WORKS</span>
+          <div className="eyebrow eyebrow-light" style={{ marginBottom: 24 }}>
+            HOW ALYGNR WORKS
           </div>
 
           {/* headline */}

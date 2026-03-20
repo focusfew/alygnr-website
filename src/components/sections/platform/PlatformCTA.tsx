@@ -1,0 +1,80 @@
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
+import SectionWrapper from '../../layout/SectionWrapper';
+import CTAButton from '../../ui/CTAButton';
+
+export default function PlatformCTA() {
+  const { ref, reveal } = useScrollReveal();
+
+  return (
+    <SectionWrapper bg="black" padding="128px 24px">
+      <div ref={ref} style={wrapper}>
+        <h2 style={{ ...headlineStyle, ...reveal(0) }} className="platform-cta-headline">
+          The system is ready.
+          <br />
+          Your GTM doesn't have to start from scratch.
+        </h2>
+
+        <p style={{ ...subheadStyle, ...reveal(1) }}>
+          Request early access to see the full platform in a guided walkthrough.
+        </p>
+
+        <div style={reveal(2)}>
+          <CTAButton
+            href="#request"
+            label="Request early access →"
+            variant="primary"
+            className="platform-cta-btn"
+          />
+        </div>
+
+        <p style={{ ...footnote, ...reveal(3) }}>
+          No commitment. We'll reach out to schedule a walkthrough.
+        </p>
+      </div>
+
+      <style>{`
+        .platform-cta-btn {
+          height: 56px !important;
+          padding: 16px 36px !important;
+          font-size: 16px !important;
+        }
+        .platform-cta-headline {
+          font-size: clamp(36px, 4.5vw, 52px);
+        }
+      `}</style>
+    </SectionWrapper>
+  );
+}
+
+const wrapper: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textAlign: 'center',
+  maxWidth: 640,
+  margin: '0 auto',
+};
+
+const headlineStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-base)',
+  fontWeight: 700,
+  color: 'var(--white)',
+  lineHeight: 1.1,
+  letterSpacing: '-0.02em',
+  margin: '0 0 24px',
+};
+
+const subheadStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-tight)',
+  fontSize: 19,
+  color: 'var(--text-secondary-dark)',
+  lineHeight: 1.7,
+  margin: '0 0 40px',
+};
+
+const footnote: React.CSSProperties = {
+  fontFamily: 'var(--font-tight)',
+  fontSize: 13,
+  color: 'var(--text-muted-dark)',
+  margin: '20px 0 0',
+};

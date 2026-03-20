@@ -66,7 +66,11 @@ function MenuIcon({ open }: { open: boolean }) {
 }
 
 /* ───────── main nav ───────── */
-export default function Nav() {
+interface NavProps {
+  activePage?: 'home' | 'platform';
+}
+
+export default function Nav({ activePage }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -128,7 +132,10 @@ export default function Nav() {
           }}
           className="nav-desktop"
         >
-          <a href="#platform" style={linkBase}>
+          <a
+            href="/platform"
+            style={activePage === 'platform' ? { ...linkBase, ...activePill } : linkBase}
+          >
             Platform
           </a>
 
@@ -265,7 +272,11 @@ export default function Nav() {
           transition: 'transform 250ms ease-in-out',
         }}
       >
-        <a href="#platform" onClick={() => setMobileOpen(false)} style={mobileLinkStyle}>
+        <a
+          href="/platform"
+          onClick={() => setMobileOpen(false)}
+          style={activePage === 'platform' ? { ...mobileLinkStyle, ...activePill } : mobileLinkStyle}
+        >
           Platform
         </a>
 
@@ -389,6 +400,13 @@ const ctaStyle: React.CSSProperties = {
   whiteSpace: 'nowrap',
   transition: 'border-color 180ms',
   flexShrink: 0,
+};
+
+const activePill: React.CSSProperties = {
+  background: 'var(--dark)',
+  color: 'var(--text-primary-dark)',
+  borderRadius: 999,
+  padding: '6px 14px',
 };
 
 const mobileLinkStyle: React.CSSProperties = {
