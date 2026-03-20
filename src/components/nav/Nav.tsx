@@ -67,7 +67,7 @@ function MenuIcon({ open }: { open: boolean }) {
 
 /* ───────── main nav ───────── */
 interface NavProps {
-  activePage?: 'home' | 'platform';
+  activePage?: 'home' | 'platform' | 'founders';
 }
 
 export default function Nav({ activePage }: NavProps) {
