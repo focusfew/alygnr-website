@@ -26,7 +26,7 @@ const rows = [
 ];
 
 export default function PlatformBeforeAfter() {
-  const { ref, reveal } = useScrollReveal();
+  const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="dark-mid">

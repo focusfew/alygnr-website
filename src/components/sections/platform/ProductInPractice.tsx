@@ -2,7 +2,7 @@ import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import SectionWrapper from '../../layout/SectionWrapper';
 
 export default function ProductInPractice() {
-  const { ref, reveal } = useScrollReveal();
+  const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="cream" padding="80px 0 112px">

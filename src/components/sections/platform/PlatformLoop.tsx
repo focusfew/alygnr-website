@@ -35,7 +35,7 @@ const nodes = [
 ];
 
 export default function PlatformLoop() {
-  const { ref, visible, reveal } = useScrollReveal();
+  const { ref, visible, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="cream">

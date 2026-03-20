@@ -21,7 +21,7 @@ const frameworks = [
 ];
 
 export default function WhyTrustThis() {
-  const { ref, reveal } = useScrollReveal();
+  const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="cream">

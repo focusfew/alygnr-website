@@ -20,7 +20,7 @@ const cards = [
 ];
 
 export default function WhatYouGet() {
-  const { ref, reveal } = useScrollReveal();
+  const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="black">

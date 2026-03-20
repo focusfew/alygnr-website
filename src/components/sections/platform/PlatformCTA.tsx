@@ -3,7 +3,7 @@ import SectionWrapper from '../../layout/SectionWrapper';
 import CTAButton from '../../ui/CTAButton';
 
 export default function PlatformCTA() {
-  const { ref, reveal } = useScrollReveal();
+  const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
     <SectionWrapper bg="black" padding="128px 24px">
