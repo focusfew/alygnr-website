@@ -12,12 +12,14 @@ const nodes = [
 
 interface ICPLoopProps {
   eyebrow?: string;
+  eyebrowClass?: string;
   headline?: string;
   subhead?: string;
 }
 
 export default function ICPLoop({
   eyebrow = 'THE SYSTEM',
+  eyebrowClass = 'eyebrow-light',
   headline = 'One foundation. Every campaign inherits from it.',
   subhead = 'Set your strategic intent once. ALYGNR turns it into plays, assets, and intelligence — automatically.',
 }: ICPLoopProps) {
@@ -26,7 +28,7 @@ export default function ICPLoop({
   return (
     <SectionWrapper bg="cream">
       <div ref={ref} style={wrapper}>
-        <div className="eyebrow eyebrow-light" style={reveal(0)}>
+        <div className={`eyebrow ${eyebrowClass}`} style={reveal(0)}>
           {eyebrow}
         </div>
 
