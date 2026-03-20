@@ -24,7 +24,7 @@ export default function AgenciesHero() {
           </p>
 
           <div style={reveal(3)}>
-            <CTAButton href="#early-access" label="Request early access →" variant="primary" />
+            <CTAButton href="#request" label="Request early access →" variant="primary" />
           </div>
         </div>
 

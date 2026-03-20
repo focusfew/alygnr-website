@@ -23,7 +23,7 @@ export default function FoundersHero() {
           </p>
 
           <div style={reveal(3)}>
-            <CTAButton href="#early-access" label="Get early access →" variant="primary" />
+            <CTAButton href="#request" label="Get early access →" variant="primary" />
           </div>
         </div>
 

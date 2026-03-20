@@ -19,15 +19,15 @@ export default function Footer() {
         <div style={navCols} className="footer-nav">
           <div>
             <p style={colHeader}>Platform</p>
-            <a href="#how" style={navLink}>How it works</a>
-            <a href="#integrations" style={navLink}>Integrations</a>
+            <a href="/platform" style={navLink}>How it works</a>
+            <a href="/#integrations" style={navLink}>Integrations</a>
           </div>
           <div>
             <p style={colHeader}>Use cases</p>
-            <a href="#founder-led" style={navLink}>Founder-led teams</a>
-            <a href="#mid-sized" style={navLink}>Scaling GTM Teams</a>
-            <a href="#enterprise" style={navLink}>Enterprise GTM</a>
-            <a href="#agencies" style={navLink}>Agencies</a>
+            <a href="/founders" style={navLink}>Founder-led teams</a>
+            <a href="/scaling-teams" style={navLink}>Scaling GTM Teams</a>
+            <a href="/enterprise" style={navLink}>Enterprise GTM</a>
+            <a href="/agencies" style={navLink}>Agencies</a>
           </div>
           <div>
             <p style={colHeader}>Company</p>

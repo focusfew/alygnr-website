@@ -18,7 +18,7 @@ export default function AgenciesCTA() {
         </p>
 
         <div style={reveal(2)}>
-          <CTAButton href="#early-access" label="Request early access →" variant="primary" />
+          <CTAButton href="#request" label="Request early access →" variant="primary" />
         </div>
 
         <p style={{ ...footnote, ...reveal(3) }}>

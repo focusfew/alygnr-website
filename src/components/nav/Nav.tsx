@@ -5,18 +5,22 @@ const alygnrForItems = [
   {
     label: 'Founder-led teams',
     desc: 'GTM structure for teams moving fast without losing strategic direction.',
+    href: '/founders',
   },
   {
     label: 'Scaling GTM Teams',
     desc: 'Marketing teams ready to connect strategy to execution.',
+    href: '/scaling-teams',
   },
   {
     label: 'Enterprise GTM',
     desc: 'GTM governance and alignment across teams and markets.',
+    href: '/enterprise',
   },
   {
     label: 'Agencies',
     desc: 'Structured, repeatable GTM across every client.',
+    href: '/agencies',
   },
 ] as const;
 
@@ -186,7 +190,7 @@ export default function Nav({ activePage }: NavProps) {
                 {alygnrForItems.map((item) => (
                   <a
                     key={item.label}
-                    href="#"
+                    href={item.href}
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -304,7 +308,7 @@ export default function Nav({ activePage }: NavProps) {
             {alygnrForItems.map((item) => (
               <a
                 key={item.label}
-                href="#"
+                href={item.href}
                 onClick={() => setMobileOpen(false)}
                 style={{
                   textDecoration: 'none',

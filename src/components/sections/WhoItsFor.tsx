@@ -6,18 +6,21 @@ const cards = [
     title: 'GTM that doesn\'t reset every quarter.',
     body: 'Growing teams can\'t afford misaligned execution. ALYGNR gives every campaign a strategic foundation — so each cycle builds on the last.',
     link: 'See how it works',
+    href: '/scaling-teams',
   },
   {
     label: 'ENTERPRISE GTM',
     title: 'One strategic direction. Across every team and market.',
     body: 'Governance, consistency, and strategic alignment at scale — without slowing execution down.',
     link: 'See how it works',
+    href: '/enterprise',
   },
   {
     label: 'AGENCIES',
     title: 'Repeatable GTM strategy across every client.',
     body: 'Stop rebuilding from scratch. Run structured, repeatable GTM across all your accounts.',
     link: 'See how it works',
+    href: '/agencies',
   },
 ] as const;
 
@@ -36,7 +39,7 @@ export default function WhoItsFor() {
             <span style={cardLabel}>{c.label}</span>
             <h3 style={cardTitle}>{c.title}</h3>
             <p style={cardBody}>{c.body}</p>
-            <a href="#" style={cardLink} className="wif-link">
+            <a href={c.href} style={cardLink} className="wif-link">
               {c.link} <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
