@@ -107,3 +107,25 @@ h1, h2, h3 {
 .btn-secondary:hover {
   border-color: var(--orange);
 }
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: border-color 180ms, color 180ms;
+  white-space: nowrap;
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--btn-primary-border);
+}
+.cta-primary:hover {
+  border-color: var(--orange);
+}

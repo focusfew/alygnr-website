@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const cards = [
   {
@@ -22,25 +22,7 @@ const cards = [
 ] as const;
 
 export default function WhoItsFor() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -91,10 +73,7 @@ const section: React.CSSProperties = {
 
 const headline: React.CSSProperties = {
   fontFamily: "var(--font-base)",
-  fontWeight: 800,
   color: 'var(--text-primary-light)',
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
   margin: '0 auto var(--heading-margin-bottom)',
   maxWidth: 720,
 };

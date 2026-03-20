@@ -1,25 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export default function Problem() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.15 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref: sectionRef, reveal } = useScrollReveal();
 
   return (
     <section ref={sectionRef} style={sectionStyle}>
@@ -70,9 +52,6 @@ const container: React.CSSProperties = {
 
 const headlineStyle: React.CSSProperties = {
   fontFamily: "var(--font-base)",
-  fontWeight: 800,
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
   color: 'var(--black)',
   margin: '0 0 var(--heading-margin-bottom)',
 };

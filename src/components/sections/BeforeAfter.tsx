@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const rows: { left: string; right: string }[] = [
   {
@@ -24,25 +24,7 @@ const rows: { left: string; right: string }[] = [
 ];
 
 export default function BeforeAfter() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -149,9 +131,6 @@ const container: React.CSSProperties = {
 
 const headline: React.CSSProperties = {
   fontFamily: "var(--font-base)",
-  fontWeight: 800,
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
   color: 'var(--white)',
   margin: '0 0 40px',
 };
