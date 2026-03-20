@@ -8,7 +8,7 @@ const quotes = [
     company: 'Mithi',
   },
   {
-    text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream easier — including the pipeline.',
+    text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream more predictable — including the pipeline.',
     name: 'Anubhav Dwivedi',
     title: 'Founder & CEO',
     company: 'The Machine Intelligence Company',

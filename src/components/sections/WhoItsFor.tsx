@@ -2,21 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 
 const cards = [
   {
-    label: 'MID-SIZED TEAMS',
-    title: 'Keep strategy and execution aligned as your team scales.',
-    body: 'Structure your GTM before complexity sets in. Move faster without losing the thread back to strategy.',
+    label: 'SCALING GTM TEAMS',
+    title: 'GTM that doesn\'t reset every quarter.',
+    body: 'Growing teams can\'t afford misaligned execution. ALYGNR gives every campaign a strategic foundation — so each cycle builds on the last.',
     link: 'See how it works',
   },
   {
-    label: 'ENTERPRISE TEAMS',
+    label: 'ENTERPRISE GTM',
     title: 'One strategic direction. Across every team and market.',
-    body: 'Governance, consistency, and alignment at scale — without slowing execution down.',
+    body: 'Governance, consistency, and strategic alignment at scale — without slowing execution down.',
     link: 'See how it works',
   },
   {
     label: 'AGENCIES',
     title: 'Repeatable GTM strategy across every client.',
-    body: 'Stop rebuilding from scratch. Run structured, compounding GTM across all your accounts.',
+    body: 'Stop rebuilding from scratch. Run structured, repeatable GTM across all your accounts.',
     link: 'See how it works',
   },
 ] as const;

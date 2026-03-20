@@ -25,7 +25,7 @@ export default function ClosingCTA() {
     <section ref={ref} style={section}>
       <div style={container}>
         <h2 style={{ ...headline, ...reveal(0) }} className="ccta-headline">
-          GTM that compounds.
+          GTM that scales.
           <br />
           Start with intent.
         </h2>
@@ -70,7 +70,7 @@ export default function ClosingCTA() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '112px 24px',
+  padding: '56px 24px',
   textAlign: 'center',
 };
 

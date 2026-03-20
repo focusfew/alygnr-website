@@ -9,13 +9,13 @@ import GA4 from '../../assets/integrations/GA4.svg'
 import GoogleAds from '../../assets/integrations/Google-Ads.svg'
 
 const logos = [
-  { name: 'Salesforce', icon: Salesforce, comingSoon: false },
-  { name: 'Slack', icon: Slack, comingSoon: false },
-  { name: 'HubSpot', icon: HubSpot, comingSoon: false },
-  { name: 'LinkedIn', icon: LinkedIn, comingSoon: false },
-  { name: 'Mailchimp', icon: Mailchimp, comingSoon: false },
-  { name: 'GA4', icon: GA4, comingSoon: false },
-  { name: 'Google Ads', icon: GoogleAds, comingSoon: true },
+  { name: 'Salesforce', icon: Salesforce, comingSoon: false, height: 28 },
+  { name: 'Slack', icon: Slack, comingSoon: false, height: 28 },
+  { name: 'HubSpot', icon: HubSpot, comingSoon: false, height: 28 },
+  { name: 'LinkedIn', icon: LinkedIn, comingSoon: false, height: 28 },
+  { name: 'Mailchimp', icon: Mailchimp, comingSoon: false, height: 28 },
+  { name: 'GA4', icon: GA4, comingSoon: false, height: 40 },
+  { name: 'Google Ads', icon: GoogleAds, comingSoon: true, height: 28 },
 ];
 
 const greyFilter = 'brightness(0) saturate(100%) invert(70%)';
@@ -39,7 +39,7 @@ function LogoItem({ item }: { item: typeof logos[number] }) {
         <img
           src={item.icon}
           alt={item.name}
-          style={{ height: 28, width: 'auto', display: 'block', filter: greyFilter }}
+          style={{ height: item.height, width: 'auto', display: 'block', filter: greyFilter }}
           onError={() => setImgFailed(true)}
         />
       )}

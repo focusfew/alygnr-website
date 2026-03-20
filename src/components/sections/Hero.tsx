@@ -28,7 +28,7 @@ export default function Hero() {
       <div style={containerStyle} className="section-container">
         {/* 1 — eyebrow */}
         <div ref={setRef(0)} className="eyebrow eyebrow-dark">
-          GTM INTELLIGENCE OPERATING SYSTEM
+          THE GTM OPERATING SYSTEM
         </div>
 
         {/* 2 — headline */}

@@ -80,7 +80,7 @@ const headlineStyle: React.CSSProperties = {
 const bodyWrap: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  gap: 20,
+  gap: 12,
   maxWidth: 600,
   margin: '0 auto',
 };
