@@ -12,7 +12,7 @@ export default function Footer() {
               ALYGNR
             </span>
           </a>
-          <p style={tagline}>GTM Intelligence Operating System</p>
+          <p style={tagline}>The GTM Operating System that builds predictable pipeline.</p>
         </div>
 
         {/* centre — nav columns */}
@@ -24,8 +24,9 @@ export default function Footer() {
           </div>
           <div>
             <p style={colHeader}>Use cases</p>
-            <a href="#mid-sized" style={navLink}>Mid-sized teams</a>
-            <a href="#enterprise" style={navLink}>Enterprise teams</a>
+            <a href="#founder-led" style={navLink}>Founder-led teams</a>
+            <a href="#mid-sized" style={navLink}>Scaling GTM Teams</a>
+            <a href="#enterprise" style={navLink}>Enterprise GTM</a>
             <a href="#agencies" style={navLink}>Agencies</a>
           </div>
           <div>

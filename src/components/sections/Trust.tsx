@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const quotes = [
   {
@@ -8,7 +8,7 @@ const quotes = [
     company: 'Mithi',
   },
   {
-    text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream easier — including the pipeline.',
+    text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream more predictable — including the pipeline.',
     name: 'Anubhav Dwivedi',
     title: 'Founder & CEO',
     company: 'The Machine Intelligence Company',
@@ -16,25 +16,7 @@ const quotes = [
 ] as const;
 
 export default function Trust() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 150}ms, transform 0.5s ease-out ${i * 150}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -68,7 +50,7 @@ export default function Trust() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '80px 24px',
+  padding: '40px 24px',
 };
 
 const grid: React.CSSProperties = {
@@ -101,11 +83,11 @@ const decorQuote: React.CSSProperties = {
 };
 
 const quoteText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
-  fontSize: 22,
+  fontFamily: "var(--font-tight)",
+  fontSize: 18,
   fontStyle: 'italic',
   color: 'var(--text-primary-dark)',
-  lineHeight: 1.7,
+  lineHeight: 1.6,
   margin: 0,
   position: 'relative',
 };
@@ -119,7 +101,7 @@ const divider: React.CSSProperties = {
 const attrName: React.CSSProperties = {
   fontSize: 16,
   fontWeight: 600,
-  color: '#fff',
+  color: 'var(--white)',
   margin: '0 0 4px',
 };
 

@@ -10,7 +10,7 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({
   bg,
-  padding = '112px 0',
+  padding = 'var(--section-padding-standard)',
   children,
 }: SectionWrapperProps) {
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const rows: { left: string; right: string }[] = [
   {
@@ -24,25 +24,7 @@ const rows: { left: string; right: string }[] = [
 ];
 
 export default function BeforeAfter() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -68,15 +50,11 @@ export default function BeforeAfter() {
           {/* data rows */}
           {rows.map((row, i) => {
             const isLast = i === rows.length - 1;
-            const rowBg = isLast
-              ? 'var(--dark)'
-              : i % 2 === 0
-                ? 'var(--black)'
-                : 'var(--dark)';
-            const cellPad = isLast ? '28px 28px' : '20px 28px';
-            const rightSize = isLast ? 20 : 16;
+            const rowBg = 'var(--black)';
+            const cellPad = '14px 28px';
+            const rightSize = 16;
             const rightWeight = isLast ? 600 : 400;
-            const leftSize = isLast ? 20 : 16;
+            const leftSize = 16;
             const leftWeight = isLast ? 600 : 400;
 
             return (
@@ -98,6 +76,7 @@ export default function BeforeAfter() {
                     color: 'var(--text-secondary-dark)',
                     lineHeight: 1.6,
                     borderRight: '1px solid rgba(255,255,255,0.07)',
+                    borderBottom: '1px solid rgba(255,255,255,0.07)',
                   }}
                 >
                   {row.left}
@@ -109,11 +88,12 @@ export default function BeforeAfter() {
                     padding: cellPad,
                     fontSize: rightSize,
                     fontWeight: rightWeight,
-                    color: '#fff',
+                    color: 'var(--white)',
                     lineHeight: 1.6,
                     display: 'flex',
                     alignItems: 'start',
                     gap: 10,
+                    borderBottom: '1px solid rgba(255,255,255,0.07)',
                   }}
                 >
                   <span style={orangeDot} />
@@ -140,7 +120,7 @@ export default function BeforeAfter() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '112px 24px',
+  padding: 'var(--section-padding-standard)',
 };
 
 const container: React.CSSProperties = {
@@ -150,12 +130,9 @@ const container: React.CSSProperties = {
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
-  fontWeight: 800,
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
-  color: '#fff',
-  margin: '0 0 64px',
+  fontFamily: "var(--font-base)",
+  color: 'var(--white)',
+  margin: '0 0 40px',
 };
 
 const tableWrap: React.CSSProperties = {

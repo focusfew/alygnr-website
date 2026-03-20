@@ -1,46 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const cards = [
   {
-    label: 'MID-SIZED TEAMS',
-    title: 'Keep strategy and execution aligned as your team scales.',
-    body: 'Structure your GTM before complexity sets in. Move faster without losing the thread back to strategy.',
+    label: 'SCALING GTM TEAMS',
+    title: 'GTM that doesn\'t reset every quarter.',
+    body: 'Growing teams can\'t afford misaligned execution. ALYGNR gives every campaign a strategic foundation — so each cycle builds on the last.',
     link: 'See how it works',
   },
   {
-    label: 'ENTERPRISE TEAMS',
+    label: 'ENTERPRISE GTM',
     title: 'One strategic direction. Across every team and market.',
-    body: 'Governance, consistency, and alignment at scale — without slowing execution down.',
+    body: 'Governance, consistency, and strategic alignment at scale — without slowing execution down.',
     link: 'See how it works',
   },
   {
     label: 'AGENCIES',
     title: 'Repeatable GTM strategy across every client.',
-    body: 'Stop rebuilding from scratch. Run structured, compounding GTM across all your accounts.',
+    body: 'Stop rebuilding from scratch. Run structured, repeatable GTM across all your accounts.',
     link: 'See how it works',
   },
 ] as const;
 
 export default function WhoItsFor() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -85,17 +67,14 @@ export default function WhoItsFor() {
 
 const section: React.CSSProperties = {
   background: 'var(--cream)',
-  padding: '112px 24px',
+  padding: 'var(--section-padding-standard)',
   textAlign: 'center',
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
-  fontWeight: 800,
+  fontFamily: "var(--font-base)",
   color: 'var(--text-primary-light)',
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
-  margin: '0 auto 64px',
+  margin: '0 auto var(--heading-margin-bottom)',
   maxWidth: 720,
 };
 
@@ -119,7 +98,7 @@ const card: React.CSSProperties = {
 };
 
 const cardLabel: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 11,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
@@ -130,7 +109,7 @@ const cardLabel: React.CSSProperties = {
 };
 
 const cardTitle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 24,
   fontWeight: 600,
   color: 'var(--text-primary-light)',
@@ -139,7 +118,7 @@ const cardTitle: React.CSSProperties = {
 };
 
 const cardBody: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 16,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.6,

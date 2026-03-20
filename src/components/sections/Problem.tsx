@@ -1,25 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export default function Problem() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.15 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref: sectionRef, reveal } = useScrollReveal();
 
   return (
     <section ref={sectionRef} style={sectionStyle}>
@@ -69,35 +51,32 @@ const container: React.CSSProperties = {
 };
 
 const headlineStyle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
-  fontWeight: 800,
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
-  color: '#0A0A0A',
-  margin: '0 0 32px',
+  fontFamily: "var(--font-base)",
+  color: 'var(--black)',
+  margin: '0 0 var(--heading-margin-bottom)',
 };
 
 const bodyWrap: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  gap: 20,
+  gap: 12,
   maxWidth: 600,
   margin: '0 auto',
 };
 
 const bodyText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 18,
-  color: '#64748B',
+  color: 'var(--text-secondary-light)',
   lineHeight: 1.75,
   margin: 0,
 };
 
 const closingText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 22,
   fontWeight: 600,
-  color: '#0F0F0E',
+  color: 'var(--text-primary-light)',
   lineHeight: 1.7,
   margin: 0,
 };

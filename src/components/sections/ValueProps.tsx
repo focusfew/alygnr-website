@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const cards = [
   {
@@ -19,25 +19,7 @@ const cards = [
 ] as const;
 
 export default function ValueProps() {
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold: 0.1 },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const reveal = (i: number): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(32px)',
-    transition: `opacity 0.5s ease-out ${i * 120}ms, transform 0.5s ease-out ${i * 120}ms`,
-  });
+  const { ref, reveal } = useScrollReveal();
 
   return (
     <section ref={ref} style={section}>
@@ -80,27 +62,24 @@ export default function ValueProps() {
 
 const section: React.CSSProperties = {
   background: 'var(--cream)',
-  padding: '112px 24px',
+  padding: '15px 24px',
   textAlign: 'center',
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
-  fontWeight: 800,
+  fontFamily: "var(--font-base)",
   color: 'var(--text-primary-light)',
-  letterSpacing: '-0.03em',
-  lineHeight: 1.05,
   margin: '0 auto 20px',
   maxWidth: 720,
 };
 
 const subhead: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 19,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.7,
   maxWidth: 560,
-  margin: '0 auto 64px',
+  margin: '0 auto 44px',
 };
 
 const grid: React.CSSProperties = {
@@ -121,7 +100,7 @@ const card: React.CSSProperties = {
 };
 
 const cardLabel: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 11,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
@@ -132,7 +111,7 @@ const cardLabel: React.CSSProperties = {
 };
 
 const cardTitle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 24,
   fontWeight: 600,
   color: 'var(--text-primary-light)',
@@ -141,7 +120,7 @@ const cardTitle: React.CSSProperties = {
 };
 
 const cardBody: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 16,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.6,
