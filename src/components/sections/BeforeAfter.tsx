@@ -106,7 +106,7 @@ export default function BeforeAfter() {
                     padding: cellPad,
                     fontSize: rightSize,
                     fontWeight: rightWeight,
-                    color: '#fff',
+                    color: 'var(--white)',
                     lineHeight: 1.6,
                     display: 'flex',
                     alignItems: 'start',
@@ -138,7 +138,7 @@ export default function BeforeAfter() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '56px 24px',
+  padding: 'var(--section-padding-standard)',
 };
 
 const container: React.CSSProperties = {
@@ -148,11 +148,11 @@ const container: React.CSSProperties = {
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  color: '#fff',
+  color: 'var(--white)',
   margin: '0 0 40px',
 };
 

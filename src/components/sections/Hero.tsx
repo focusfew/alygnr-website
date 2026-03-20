@@ -56,7 +56,7 @@ export default function Hero() {
           <a href="#request" style={ctaPrimary} className="hero-cta-primary">
             Request early access →
           </a>
-          <a href="#how" className="btn-secondary hero-cta-secondary" style={{ height: 52, color: '#fff' }}>
+          <a href="#how" className="btn-secondary hero-cta-secondary" style={{ height: 52, color: 'var(--white)' }}>
             See how it works
           </a>
         </div>
@@ -80,7 +80,7 @@ export default function Hero() {
           width: auto;
         }
         .hero-cta-primary:hover {
-          border-color: #E8521A !important;
+          border-color: var(--orange) !important;
         }
         @media (max-width: 768px) {
           .hero-section {
@@ -128,12 +128,12 @@ const containerStyle: React.CSSProperties = {
 
 /* 2 — headline */
 const headlineStyle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  color: '#fff',
-  margin: '0 0 32px',
+  color: 'var(--white)',
+  margin: '0 0 var(--heading-margin-bottom)',
 };
 
 const underlinedWord: React.CSSProperties = {
@@ -153,17 +153,17 @@ const subheadWrap: React.CSSProperties = {
 };
 
 const subheadProblem: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 18,
   fontWeight: 400,
-  color: '#9BA3AF',
+  color: 'var(--text-secondary-dark)',
   lineHeight: 1.7,
   margin: 0,
   textAlign: 'center',
 };
 
 const subheadSolution: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 20,
   fontWeight: 500,
   color: '#D1D5DB',
@@ -190,16 +190,16 @@ const ctaBase: React.CSSProperties = {
   fontWeight: 500,
   textDecoration: 'none',
   cursor: 'pointer',
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   transition: 'border-color 180ms, color 180ms',
   whiteSpace: 'nowrap',
 };
 
 const ctaPrimary: React.CSSProperties = {
   ...ctaBase,
-  background: '#FFFFFF',
-  color: '#0A0A0A',
-  border: '1px solid #EFEFED',
+  background: 'var(--white)',
+  color: 'var(--black)',
+  border: '1px solid var(--btn-primary-border)',
 };
 
 

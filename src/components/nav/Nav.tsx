@@ -3,16 +3,20 @@ import { useEffect, useState, useRef } from 'react';
 /* ───────── dropdown items ───────── */
 const alygnrForItems = [
   {
-    label: 'Mid-sized teams',
+    label: 'Founder-led teams',
+    desc: 'GTM structure for teams moving fast without losing strategic direction.',
+  },
+  {
+    label: 'Scaling GTM Teams',
     desc: 'Marketing teams ready to connect strategy to execution.',
   },
   {
-    label: 'Enterprise teams',
-    desc: 'Multi-team organisations coordinating GTM at scale.',
+    label: 'Enterprise GTM',
+    desc: 'GTM governance and alignment across teams and markets.',
   },
   {
     label: 'Agencies',
-    desc: 'Agencies managing GTM strategy across multiple clients.',
+    desc: 'Structured, repeatable GTM across every client.',
   },
 ] as const;
 

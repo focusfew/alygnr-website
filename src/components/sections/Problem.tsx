@@ -69,12 +69,12 @@ const container: React.CSSProperties = {
 };
 
 const headlineStyle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  color: '#0A0A0A',
-  margin: '0 0 32px',
+  color: 'var(--black)',
+  margin: '0 0 var(--heading-margin-bottom)',
 };
 
 const bodyWrap: React.CSSProperties = {
@@ -86,18 +86,18 @@ const bodyWrap: React.CSSProperties = {
 };
 
 const bodyText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 18,
-  color: '#64748B',
+  color: 'var(--text-secondary-light)',
   lineHeight: 1.75,
   margin: 0,
 };
 
 const closingText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 22,
   fontWeight: 600,
-  color: '#0F0F0E',
+  color: 'var(--text-primary-light)',
   lineHeight: 1.7,
   margin: 0,
 };

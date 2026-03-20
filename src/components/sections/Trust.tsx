@@ -101,7 +101,7 @@ const decorQuote: React.CSSProperties = {
 };
 
 const quoteText: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 18,
   fontStyle: 'italic',
   color: 'var(--text-primary-dark)',
@@ -119,7 +119,7 @@ const divider: React.CSSProperties = {
 const attrName: React.CSSProperties = {
   fontSize: 16,
   fontWeight: 600,
-  color: '#fff',
+  color: 'var(--white)',
   margin: '0 0 4px',
 };
 

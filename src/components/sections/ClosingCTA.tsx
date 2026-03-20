@@ -25,9 +25,9 @@ export default function ClosingCTA() {
     <section ref={ref} style={section}>
       <div style={container}>
         <h2 style={{ ...headline, ...reveal(0) }} className="ccta-headline">
-          GTM that scales.
+          One system.
           <br />
-          Start with intent.
+          Strategy to pipeline.
         </h2>
 
         <p style={{ ...subhead, ...reveal(1) }}>
@@ -39,7 +39,7 @@ export default function ClosingCTA() {
           <a href="#request" style={ctaPrimary} className="ccta-primary">
             Request early access &rarr;
           </a>
-          <a href="#how" className="btn-secondary ccta-secondary" style={{ height: 52, color: '#fff' }}>
+          <a href="#how" className="btn-secondary ccta-secondary" style={{ height: 52, color: 'var(--white)' }}>
             See how it works
           </a>
         </div>
@@ -49,7 +49,7 @@ export default function ClosingCTA() {
         .ccta-headline { font-size: clamp(36px, 4.5vw, 52px); }
         .ccta-ctas { flex-direction: row; }
         .ccta-primary:hover {
-          border-color: #E8521A !important;
+          border-color: var(--orange) !important;
         }
         @media (max-width: 768px) {
           .ccta-headline { font-size: 36px !important; }
@@ -70,7 +70,7 @@ export default function ClosingCTA() {
 
 const section: React.CSSProperties = {
   background: 'var(--black)',
-  padding: '56px 24px',
+  padding: 'var(--section-padding-standard)',
   textAlign: 'center',
 };
 
@@ -80,16 +80,16 @@ const container: React.CSSProperties = {
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  color: '#fff',
+  color: 'var(--white)',
   margin: '0 0 24px',
 };
 
 const subhead: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 19,
   color: 'var(--text-secondary-dark)',
   lineHeight: 1.7,
@@ -113,15 +113,15 @@ const ctaBase: React.CSSProperties = {
   fontWeight: 500,
   textDecoration: 'none',
   cursor: 'pointer',
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   transition: 'border-color 180ms, color 180ms',
   whiteSpace: 'nowrap',
 };
 
 const ctaPrimary: React.CSSProperties = {
   ...ctaBase,
-  background: '#FFFFFF',
-  color: '#0A0A0A',
-  border: '1px solid #EFEFED',
+  background: 'var(--white)',
+  color: 'var(--black)',
+  border: '1px solid var(--btn-primary-border)',
 };
 

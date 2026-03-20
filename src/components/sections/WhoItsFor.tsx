@@ -85,17 +85,17 @@ export default function WhoItsFor() {
 
 const section: React.CSSProperties = {
   background: 'var(--cream)',
-  padding: '56px 24px',
+  padding: 'var(--section-padding-standard)',
   textAlign: 'center',
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   color: 'var(--text-primary-light)',
   letterSpacing: '-0.03em',
   lineHeight: 1.05,
-  margin: '0 auto 32px',
+  margin: '0 auto var(--heading-margin-bottom)',
   maxWidth: 720,
 };
 
@@ -119,7 +119,7 @@ const card: React.CSSProperties = {
 };
 
 const cardLabel: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 11,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
@@ -130,7 +130,7 @@ const cardLabel: React.CSSProperties = {
 };
 
 const cardTitle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 24,
   fontWeight: 600,
   color: 'var(--text-primary-light)',
@@ -139,7 +139,7 @@ const cardTitle: React.CSSProperties = {
 };
 
 const cardBody: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 16,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.6,

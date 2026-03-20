@@ -2,7 +2,7 @@ import OperatingLoop from '../diagrams/OperatingLoop';
 
 export default function SystemLoop() {
   return (
-    <section style={{ background: '#F7F7F5', padding: '48px 0' }}>
+    <section style={{ background: 'var(--cream)', padding: '48px 0' }}>
       <div style={{
         maxWidth: 960,
         margin: '0 auto',
@@ -26,7 +26,7 @@ export default function SystemLoop() {
               display: 'inline-block',
               width: 2,
               height: 16,
-              backgroundColor: '#E8521A',
+              backgroundColor: 'var(--orange)',
               flexShrink: 0,
             }} />
             <span style={{
@@ -34,7 +34,7 @@ export default function SystemLoop() {
               fontWeight: 500,
               letterSpacing: '0.1em',
               textTransform: 'uppercase' as const,
-              color: '#E8521A',
+              color: 'var(--orange)',
               lineHeight: '16px',
             }}>HOW ALYGNR WORKS</span>
           </div>
@@ -45,7 +45,7 @@ export default function SystemLoop() {
             fontWeight: 800,
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            color: '#0F0F0E',
+            color: 'var(--text-primary-light)',
             marginBottom: 32,
           }}>
             One system.<br />
@@ -71,7 +71,7 @@ export default function SystemLoop() {
           <div style={{
             fontSize: 17,
             fontWeight: 700,
-            color: '#0F0F0E',
+            color: 'var(--text-primary-light)',
             lineHeight: 1.4,
             marginBottom: 6,
           }}>
@@ -82,7 +82,7 @@ export default function SystemLoop() {
           <div style={{
             fontSize: 17,
             fontWeight: 700,
-            color: '#0F0F0E',
+            color: 'var(--text-primary-light)',
             lineHeight: 1.4,
           }}>
             Everything compounds.
@@ -100,7 +100,7 @@ export default function SystemLoop() {
 
 const bodyLine: React.CSSProperties = {
   fontSize: 16,
-  color: '#64748B',
+  color: 'var(--text-secondary-light)',
   lineHeight: 1.6,
   margin: 0,
 };

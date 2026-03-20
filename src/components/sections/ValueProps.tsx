@@ -85,7 +85,7 @@ const section: React.CSSProperties = {
 };
 
 const headline: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontWeight: 800,
   color: 'var(--text-primary-light)',
   letterSpacing: '-0.03em',
@@ -95,7 +95,7 @@ const headline: React.CSSProperties = {
 };
 
 const subhead: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 19,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.7,
@@ -121,7 +121,7 @@ const card: React.CSSProperties = {
 };
 
 const cardLabel: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 11,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
@@ -132,7 +132,7 @@ const cardLabel: React.CSSProperties = {
 };
 
 const cardTitle: React.CSSProperties = {
-  fontFamily: "'Inter', sans-serif",
+  fontFamily: "var(--font-base)",
   fontSize: 24,
   fontWeight: 600,
   color: 'var(--text-primary-light)',
@@ -141,7 +141,7 @@ const cardTitle: React.CSSProperties = {
 };
 
 const cardBody: React.CSSProperties = {
-  fontFamily: "'Inter Tight', sans-serif",
+  fontFamily: "var(--font-tight)",
   fontSize: 16,
   color: 'var(--text-secondary-light)',
   lineHeight: 1.6,
