@@ -27,7 +27,7 @@ export default function FoundersCTA() {
 
         <style>{`
           .founders-cta-headline {
-            font-size: clamp(32px, 4vw, 48px);
+            font-size: clamp(28px, 3.5vw, 42px);
           }
         `}</style>
       </div>

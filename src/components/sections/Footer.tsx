@@ -1,3 +1,5 @@
+import logoSrc from '../../assets/logo.png';
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -7,10 +9,7 @@ export default function Footer() {
         {/* left — logo + tagline */}
         <div style={leftCol}>
           <a href="/" style={logoLink}>
-            <span style={{ color: 'var(--orange)', fontWeight: 700, fontSize: 20 }}>/</span>
-            <span style={{ color: 'var(--text-primary-dark)', fontWeight: 600, fontSize: 16, letterSpacing: '0.08em' }}>
-              ALYGNR
-            </span>
+            <img src={logoSrc} alt="ALYGNR" style={{ height: 28, width: 'auto' }} />
           </a>
           <p style={tagline}>The GTM Operating System that builds predictable pipeline.</p>
         </div>

@@ -89,7 +89,7 @@ const grid: React.CSSProperties = {};
 
 const headlineStyle: React.CSSProperties = {
   fontFamily: 'var(--font-base)',
-  fontSize: 48,
+  fontSize: 'clamp(32px, 3.5vw, 44px)',
   fontWeight: 700,
   color: 'var(--text-primary-light)',
   lineHeight: 1.1,

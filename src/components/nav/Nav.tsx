@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import logoSrc from '../../assets/logo.png';
 
 /* ───────── dropdown items ───────── */
 const alygnrForItems = [
@@ -123,7 +124,7 @@ export default function Nav({ activePage }: NavProps) {
       >
         {/* ── logo ── */}
         <a href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <img src="/logo.png" alt="ALYGNR" style={{ height: 32 }} />
+          <img src={logoSrc} alt="ALYGNR" style={{ height: 28, width: 'auto' }} />
         </a>
 
         {/* ── desktop centre links ── */}

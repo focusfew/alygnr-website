@@ -25,7 +25,7 @@ export default function CompanyHero() {
 
         <style>{`
           .company-hero-headline {
-            font-size: clamp(36px, 5vw, 64px);
+            font-size: clamp(32px, 4vw, 52px);
           }
         `}</style>
       </div>

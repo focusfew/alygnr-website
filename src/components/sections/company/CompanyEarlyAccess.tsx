@@ -35,6 +35,7 @@ const wrapper: React.CSSProperties = {
 
 const headline: React.CSSProperties = {
   fontFamily: 'var(--font-tight)',
+  fontSize: 'clamp(32px, 4vw, 48px)',
   fontWeight: 700,
   color: 'var(--white)',
   lineHeight: 1.15,

@@ -39,51 +39,50 @@ export default function ICPLoop({
         {/* loop diagram */}
         <div style={{ ...diagramWrap, ...reveal(3) }} className="icp-loop-diagram-wrap">
           {/* desktop */}
-          <div className="icp-loop-desktop">
-            {/* forward arrows */}
-            <svg
-              className="icp-loop-arrows-svg"
-              style={arrowSvgStyle}
-              viewBox="0 0 900 24"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <defs>
-                <marker
-                  id="icp-arrowhead-right"
-                  markerWidth="8"
-                  markerHeight="6"
-                  refX="8"
-                  refY="3"
-                  orient="auto"
-                >
-                  <path d="M0,0 L8,3 L0,6" fill="var(--orange)" />
-                </marker>
-              </defs>
-              {[0, 1, 2, 3, 4].map((i) => {
-                const x1 = 75 + i * 150 + 60;
-                const x2 = 75 + (i + 1) * 150 - 60;
-                return (
-                  <line
-                    key={i}
-                    x1={x1}
-                    y1={12}
-                    x2={x2}
-                    y2={12}
-                    stroke="var(--orange)"
-                    strokeWidth={1.5}
-                    markerEnd="url(#icp-arrowhead-right)"
-                    strokeDasharray={x2 - x1}
-                    strokeDashoffset={visible ? 0 : x2 - x1}
-                    style={{
-                      transition: `stroke-dashoffset 1.2s ease-out ${0.15 * i}s`,
-                    }}
-                  />
-                );
-              })}
-            </svg>
-
+          <div className="icp-loop-desktop" style={{ position: 'relative' }}>
             {/* nodes row */}
             <div style={nodesRow}>
+              {/* forward arrows SVG layer — overlaid at pill centre height */}
+              <svg
+                className="icp-loop-arrows-svg"
+                style={arrowSvgOverlay}
+                viewBox="0 0 900 24"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <marker
+                    id="icp-arrowhead-right"
+                    markerWidth="8"
+                    markerHeight="6"
+                    refX="8"
+                    refY="3"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L8,3 L0,6" fill="var(--orange)" />
+                  </marker>
+                </defs>
+                {[0, 1, 2, 3, 4].map((i) => {
+                  const x1 = 75 + i * 150 + 60;
+                  const x2 = 75 + (i + 1) * 150 - 60;
+                  return (
+                    <line
+                      key={i}
+                      x1={x1}
+                      y1={12}
+                      x2={x2}
+                      y2={12}
+                      stroke="var(--orange)"
+                      strokeWidth={1.5}
+                      markerEnd="url(#icp-arrowhead-right)"
+                      strokeDasharray={x2 - x1}
+                      strokeDashoffset={visible ? 0 : x2 - x1}
+                      style={{
+                        transition: `stroke-dashoffset 1.2s ease-out ${0.15 * i}s`,
+                      }}
+                    />
+                  );
+                })}
+              </svg>
               {nodes.map((node) => (
                 <div key={node.num} style={nodeCol}>
                   <div style={pill}>
@@ -101,24 +100,12 @@ export default function ICPLoop({
               viewBox="0 0 900 60"
               preserveAspectRatio="xMidYMid meet"
             >
-              <defs>
-                <marker
-                  id="icp-arrowhead-return"
-                  markerWidth="8"
-                  markerHeight="6"
-                  refX="0"
-                  refY="3"
-                  orient="auto-start-reverse"
-                >
-                  <path d="M8,0 L0,3 L8,6" fill="var(--orange)" />
-                </marker>
-              </defs>
               <path
                 d="M825,0 C825,45 75,45 75,0"
                 fill="none"
                 stroke="var(--orange)"
                 strokeWidth={1.5}
-                markerStart="url(#icp-arrowhead-return)"
+                markerEnd="url(#icp-arrowhead-right)"
                 strokeDasharray={900}
                 strokeDashoffset={visible ? 0 : 900}
                 style={{
@@ -310,10 +297,13 @@ const pillLabel: React.CSSProperties = {
   color: 'var(--white)',
 };
 
-const arrowSvgStyle: React.CSSProperties = {
+const arrowSvgOverlay: React.CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
   width: '100%',
-  height: 24,
-  marginBottom: -4,
+  height: 44,
+  pointerEvents: 'none',
 };
 
 const returnSvgStyle: React.CSSProperties = {
