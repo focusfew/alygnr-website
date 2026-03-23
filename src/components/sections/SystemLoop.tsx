@@ -3,7 +3,7 @@ import OperatingLoop from '../diagrams/OperatingLoop';
 export default function SystemLoop() {
   return (
     <section style={{ background: 'var(--cream)', padding: '48px 0' }}>
-      <div style={{
+      <div className="system-loop-grid" style={{
         maxWidth: 960,
         margin: '0 auto',
         padding: '0 48px',
@@ -74,6 +74,16 @@ export default function SystemLoop() {
           <OperatingLoop />
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .system-loop-grid {
+            grid-template-columns: 1fr !important;
+            padding: 0 16px !important;
+            gap: 32px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

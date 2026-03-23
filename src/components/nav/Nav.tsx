@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import logoSrc from '../../assets/logo.png';
+import logoSrc from '../../assets/logo3.png';
 
 /* ───────── dropdown items ───────── */
 const alygnrForItems = [

@@ -27,7 +27,7 @@ export default function ScalingTeamsCTA() {
 
         <style>{`
           .scaling-teams-cta-headline {
-            font-size: clamp(28px, 3.5vw, 42px);
+            font-size: 52px;
           }
         `}</style>
       </div>
@@ -36,7 +36,7 @@ export default function ScalingTeamsCTA() {
 }
 
 const wrapper: React.CSSProperties = {
-  maxWidth: 600,
+  maxWidth: 720,
   margin: '0 auto',
   textAlign: 'center',
 };

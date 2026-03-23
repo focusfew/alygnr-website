@@ -121,12 +121,24 @@ export default function PlatformLoop() {
               viewBox="0 0 900 60"
               preserveAspectRatio="xMidYMid meet"
             >
+              <defs>
+                <marker
+                  id="arrowhead-return-left"
+                  markerWidth="8"
+                  markerHeight="6"
+                  refX="0"
+                  refY="3"
+                  orient="auto"
+                >
+                  <path d="M8,0 L0,3 L8,6" fill="var(--orange)" />
+                </marker>
+              </defs>
               <path
                 d="M825,0 C825,45 75,45 75,0"
                 fill="none"
                 stroke="var(--orange)"
                 strokeWidth={1.5}
-                markerEnd="url(#arrowhead-right)"
+                markerEnd="url(#arrowhead-return-left)"
                 strokeDasharray={900}
                 strokeDashoffset={visible ? 0 : 900}
                 style={{
@@ -340,10 +352,11 @@ const nodeDesc: React.CSSProperties = {
 
 const arrowSvgOverlay: React.CSSProperties = {
   position: 'absolute',
-  top: 0,
+  top: '50%',
   left: 0,
   width: '100%',
   height: 44,
+  transform: 'translateY(-50%)',
   pointerEvents: 'none',
 };
 

@@ -110,8 +110,10 @@ export default function BeforeAfter() {
         .ba-row { grid-template-columns: 1fr 1fr; }
         @media (max-width: 768px) {
           .ba-headline { font-size: 36px !important; }
-          .ba-row { grid-template-columns: 1fr !important; }
-          .ba-row > div { border-right: none !important; }
+          .ba-row > div {
+            font-size: 13px !important;
+            padding: 8px 12px !important;
+          }
         }
       `}</style>
     </section>
