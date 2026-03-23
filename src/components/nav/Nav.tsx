@@ -71,7 +71,7 @@ function MenuIcon({ open }: { open: boolean }) {
 
 /* ───────── main nav ───────── */
 interface NavProps {
-  activePage?: 'home' | 'platform' | 'founders' | 'scaling-teams' | 'enterprise' | 'agencies';
+  activePage?: 'home' | 'platform' | 'founders' | 'scaling-teams' | 'enterprise' | 'agencies' | 'company';
 }
 
 export default function Nav({ activePage }: NavProps) {
@@ -231,7 +231,7 @@ export default function Nav({ activePage }: NavProps) {
             </div>
           </div>
 
-          <a href="#company" style={linkBase}>
+          <a href="/company" style={linkBase}>
             Company
           </a>
         </div>
@@ -342,7 +342,7 @@ export default function Nav({ activePage }: NavProps) {
           </div>
         )}
 
-        <a href="#company" onClick={() => setMobileOpen(false)} style={mobileLinkStyle}>
+        <a href="/company" onClick={() => setMobileOpen(false)} style={mobileLinkStyle}>
           Company
         </a>
 
