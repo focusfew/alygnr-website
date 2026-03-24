@@ -6,8 +6,8 @@ export default function AgenciesHero() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black">
-      <div ref={ref} style={outer}>
+    <SectionWrapper bg="black" padding="0">
+      <div ref={ref} style={outer} className="agencies-hero-outer">
         <div style={inner}>
           <div className="eyebrow eyebrow-dark" style={reveal(0)}>
             FOR B2B AGENCIES
@@ -32,6 +32,12 @@ export default function AgenciesHero() {
           .agencies-hero-headline {
             font-size: clamp(36px, 5vw, 64px);
           }
+          @media (max-width: 768px) {
+            .agencies-hero-outer {
+              align-items: flex-start !important;
+              padding-top: 80px !important;
+            }
+          }
         `}</style>
       </div>
     </SectionWrapper>
@@ -43,6 +49,8 @@ const outer: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  paddingTop: 80,
+  paddingBottom: 80,
 };
 
 const inner: React.CSSProperties = {

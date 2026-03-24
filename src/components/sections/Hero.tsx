@@ -58,7 +58,8 @@ export default function Hero() {
         }
         @media (max-width: 768px) {
           .hero-section {
-            padding-top: 32px !important;
+            align-items: flex-start !important;
+            padding-top: 80px !important;
           }
           .hero-headline {
             font-size: clamp(36px, 7vw, 52px) !important;

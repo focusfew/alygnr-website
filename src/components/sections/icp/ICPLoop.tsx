@@ -39,57 +39,25 @@ export default function ICPLoop({
         {/* loop diagram */}
         <div style={{ ...diagramWrap, ...reveal(3) }} className="icp-loop-diagram-wrap">
           {/* desktop */}
-          <div className="icp-loop-desktop" style={{ position: 'relative' }}>
-            {/* nodes row */}
+          <div className="icp-loop-desktop">
+            {/* nodes row with inline triangle arrows */}
             <div style={nodesRow}>
-              {/* forward arrows SVG layer — overlaid at pill centre height */}
-              <svg
-                className="icp-loop-arrows-svg"
-                style={arrowSvgOverlay}
-                viewBox="0 0 900 24"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <defs>
-                  <marker
-                    id="icp-arrowhead-right"
-                    markerWidth="8"
-                    markerHeight="6"
-                    refX="8"
-                    refY="3"
-                    orient="auto"
-                  >
-                    <path d="M0,0 L8,3 L0,6" fill="var(--orange)" />
-                  </marker>
-                </defs>
-                {[0, 1, 2, 3, 4].map((i) => {
-                  const x1 = 75 + i * 150 + 60;
-                  const x2 = 75 + (i + 1) * 150 - 60;
-                  return (
-                    <line
-                      key={i}
-                      x1={x1}
-                      y1={12}
-                      x2={x2}
-                      y2={12}
-                      stroke="var(--orange)"
-                      strokeWidth={1.5}
-                      markerEnd="url(#icp-arrowhead-right)"
-                      strokeDasharray={x2 - x1}
-                      strokeDashoffset={visible ? 0 : x2 - x1}
-                      style={{
-                        transition: `stroke-dashoffset 1.2s ease-out ${0.15 * i}s`,
-                      }}
-                    />
-                  );
-                })}
-              </svg>
-              {nodes.map((node) => (
-                <div key={node.num} style={nodeCol}>
-                  <div style={pill}>
-                    <span style={pillNum}>{node.num}</span>
-                    <span style={pillLabel}>{node.label}</span>
+              {nodes.map((node, i) => (
+                <>
+                  <div key={node.num} style={nodeCol}>
+                    <div style={pill}>
+                      <span style={pillNum}>{node.num}</span>
+                      <span style={pillLabel}>{node.label}</span>
+                    </div>
                   </div>
-                </div>
+                  {i < nodes.length - 1 && (
+                    <div key={`arrow-${i}`} style={arrowCol}>
+                      <svg width="12" height="20" viewBox="0 0 12 20" style={{ display: 'block' }}>
+                        <path d="M0,0 L12,10 L0,20 Z" fill="var(--orange)" />
+                      </svg>
+                    </div>
+                  )}
+                </>
               ))}
             </div>
 
@@ -102,22 +70,22 @@ export default function ICPLoop({
             >
               <defs>
                 <marker
-                  id="icp-arrowhead-return-left"
+                  id="icp-arrowhead-right"
                   markerWidth="8"
                   markerHeight="6"
-                  refX="0"
+                  refX="8"
                   refY="3"
                   orient="auto"
                 >
-                  <path d="M8,0 L0,3 L8,6" fill="var(--orange)" />
+                  <path d="M0,0 L8,3 L0,6" fill="var(--orange)" />
                 </marker>
               </defs>
               <path
-                d="M825,0 C825,45 75,45 75,0"
+                d="M75,0 C75,45 825,45 825,0"
                 fill="none"
                 stroke="var(--orange)"
                 strokeWidth={1.5}
-                markerEnd="url(#icp-arrowhead-return-left)"
+                markerEnd="url(#icp-arrowhead-right)"
                 strokeDasharray={900}
                 strokeDashoffset={visible ? 0 : 900}
                 style={{
@@ -274,8 +242,9 @@ const subheadStyle: React.CSSProperties = {
 
 const nodesRow: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)',
-  gap: 8,
+  gridTemplateColumns: '1fr auto 1fr auto 1fr auto 1fr auto 1fr auto 1fr',
+  gap: 4,
+  alignItems: 'center',
 };
 
 const nodeCol: React.CSSProperties = {
@@ -309,14 +278,10 @@ const pillLabel: React.CSSProperties = {
   color: 'var(--white)',
 };
 
-const arrowSvgOverlay: React.CSSProperties = {
-  position: 'absolute',
-  top: '50%',
-  left: 0,
-  width: '100%',
-  height: 44,
-  transform: 'translateY(-50%)',
-  pointerEvents: 'none',
+const arrowCol: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const returnSvgStyle: React.CSSProperties = {

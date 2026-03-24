@@ -45,6 +45,10 @@ export default function PlatformHero() {
           width: auto;
         }
         @media (max-width: 768px) {
+          .platform-hero {
+            align-items: flex-start !important;
+            padding-top: 80px !important;
+          }
           .platform-hero-headline {
             font-size: clamp(36px, 6vw, 52px) !important;
           }

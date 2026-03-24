@@ -5,15 +5,15 @@ export default function CompanyHero() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black">
-      <div ref={ref} style={outer}>
+    <SectionWrapper bg="black" padding="0">
+      <div ref={ref} style={outer} className="company-hero-outer">
         <div style={inner}>
           <div className="eyebrow eyebrow-dark" style={reveal(0)}>
             THE COMPANY
           </div>
 
           <h1 style={{ ...headline, ...reveal(1) }} className="company-hero-headline">
-            GTM is broken. We built the fix.
+            GTM is broken.<br />We built the fix.
           </h1>
 
           <p style={{ ...subhead, ...reveal(2) }}>
@@ -27,6 +27,12 @@ export default function CompanyHero() {
           .company-hero-headline {
             font-size: clamp(32px, 4vw, 52px);
           }
+          @media (max-width: 768px) {
+            .company-hero-outer {
+              align-items: flex-start !important;
+              padding-top: 80px !important;
+            }
+          }
         `}</style>
       </div>
     </SectionWrapper>
@@ -38,6 +44,8 @@ const outer: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  paddingTop: 80,
+  paddingBottom: 80,
 };
 
 const inner: React.CSSProperties = {
