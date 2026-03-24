@@ -302,11 +302,6 @@ const tagPill: React.CSSProperties = {
   padding: '3px 10px',
 };
 
-const scoresRow: React.CSSProperties = {
-  display: 'flex',
-  gap: 8,
-};
-
 const scoreValue: React.CSSProperties = {
   fontFamily: 'var(--font-base)',
   fontSize: 36,
