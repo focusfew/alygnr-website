@@ -1,4 +1,4 @@
-import OperatingLoop from '../diagrams/OperatingLoop';
+import loopVertical from '../../assets/loop-vertical.png';
 
 export default function SystemLoop() {
   return (
@@ -70,8 +70,12 @@ export default function SystemLoop() {
         </div>
 
         {/* ── right column ── */}
-        <div style={{ marginTop: 44 }}>
-          <OperatingLoop />
+        <div className="system-loop-img-col" style={{ marginTop: 44 }}>
+          <img
+            src={loopVertical}
+            alt="ALYGNR Operating Loop"
+            style={{ width: 480, maxWidth: '100%', height: 'auto', display: 'block' }}
+          />
         </div>
       </div>
 
@@ -81,6 +85,15 @@ export default function SystemLoop() {
             grid-template-columns: 1fr !important;
             padding: 0 16px !important;
             gap: 32px !important;
+          }
+          .system-loop-img-col {
+            order: -1 !important;
+            margin-top: 0 !important;
+          }
+          .system-loop-img-col img {
+            width: 300px !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
           }
         }
       `}</style>
