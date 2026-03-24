@@ -4,19 +4,19 @@ import SectionWrapper from '../../layout/SectionWrapper';
 const frameworks = [
   {
     label: 'Buyer Forces',
-    desc: 'Four buyer motivation archetypes that shape messaging, channel strategy, and play selection.',
+    desc: 'Buyer motivation archetypes that shape messaging, channel strategy, and play selection.',
   },
   {
     label: 'Blueprint Engine',
-    desc: 'Deterministic logic that translates a Strategic Intent into a recommended funnel architecture and play set.',
+    desc: 'Purpose-built logic that translates a Strategic Intent into a recommended funnel architecture and play set.',
   },
   {
     label: 'Messaging Core',
-    desc: 'A single source of truth for positioning, value pillars, and proof blocks. Inherited by every asset.',
+    desc: 'A single source of truth for positioning, value pillars, and proof blocks. Applied across every asset.',
   },
   {
     label: 'ALYGNR Score',
-    desc: "A usage-accuracy and readiness score that tells you where your GTM is aligned and where it's leaking.",
+    desc: "A execution health score that tells you where your GTM is aligned and where it's leaking.",
   },
 ];
 

@@ -52,7 +52,7 @@ export default function PlatformLoop() {
 
         {/* subhead */}
         <p style={{ ...subheadStyle, ...reveal(2) }}>
-          Every layer inherits context from the one above it. Every output feeds
+          Every decision builds on the one before it. Every output feeds
           intelligence back into the system.
         </p>
 

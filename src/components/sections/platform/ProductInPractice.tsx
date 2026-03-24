@@ -70,10 +70,8 @@ export default function ProductInPractice() {
               it's leaking.
             </p>
             <div style={mockup}>
-              <div style={scoresRow}>
+              <div style={{ textAlign: 'center' as const }}>
                 <ScoreBlock label="ALYGNR SCORE" value={87} />
-                <ScoreBlock label="ALIGNMENT" value={92} />
-                <ScoreBlock label="READINESS" value={78} />
               </div>
               <div style={{ ...divider, margin: '16px 0' }} />
               <StageRow label="Awareness" color="var(--tag-awareness)" />
