@@ -36,7 +36,6 @@ export default function ICPLoop({
             className="icp-loop-img"
             style={diagramImg}
           />
-          <p style={returnLabelStyle}>The loop compounds with every cycle</p>
         </div>
       </div>
 
@@ -91,11 +90,3 @@ const diagramImg: React.CSSProperties = {
   margin: '0 auto',
 };
 
-const returnLabelStyle: React.CSSProperties = {
-  fontFamily: 'var(--font-tight)',
-  fontSize: 12,
-  color: 'var(--text-muted-dark)',
-  fontStyle: 'italic',
-  textAlign: 'center',
-  margin: '12px 0 0',
-};

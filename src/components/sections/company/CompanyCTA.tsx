@@ -6,7 +6,7 @@ export default function CompanyCTA() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black" padding="112px 24px">
+    <SectionWrapper bg="black" padding="56px 24px">
       <div ref={ref} style={wrapper}>
         <h2 style={{ ...headline, ...reveal(0) }} className="company-cta-headline">
           We are building the GTM OS.<br />

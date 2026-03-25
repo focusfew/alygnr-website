@@ -20,7 +20,7 @@ export default function ClosingCTA() {
 
         <div style={{ ...ctaRow, ...reveal(2) }} className="ccta-ctas">
           <CTAButton href="#request" label="Request early access →" variant="primary" className="ccta-primary" />
-          <CTAButton href="#how" label="See how it works" variant="secondary" className="ccta-secondary" />
+          <CTAButton href="/platform" label="See how it works" variant="secondary" className="ccta-secondary" />
         </div>
       </div>
 

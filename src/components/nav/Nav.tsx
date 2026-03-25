@@ -124,7 +124,7 @@ export default function Nav({ activePage }: NavProps) {
       >
         {/* ── logo ── */}
         <a href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <img src={logoSrc} alt="ALYGNR" style={{ height: 40, width: 'auto' }} />
+          <img src={logoSrc} alt="ALYGNR" style={{ height: 30, width: 'auto' }} />
         </a>
 
         {/* ── desktop centre links ── */}

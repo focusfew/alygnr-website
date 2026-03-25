@@ -1,4 +1,4 @@
-import loopVertical from '../../assets/loop-vertical.png';
+import loopVertical from '../../assets/loop-vertical2.png';
 
 export default function SystemLoop() {
   return (

@@ -6,7 +6,7 @@ export default function PlatformCTA() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black" padding="128px 24px">
+    <SectionWrapper bg="black" padding="56px 24px">
       <div ref={ref} style={wrapper}>
         <h2 style={{ ...headlineStyle, ...reveal(0) }} className="platform-cta-headline">
           The system is ready.

@@ -32,7 +32,6 @@ export default function PlatformLoop() {
             className="platform-loop-img"
             style={diagramImg}
           />
-          <p style={returnLabel}>The loop compounds with every cycle</p>
         </div>
       </div>
 
@@ -87,11 +86,3 @@ const diagramImg: React.CSSProperties = {
   margin: '0 auto',
 };
 
-const returnLabel: React.CSSProperties = {
-  fontFamily: 'var(--font-tight)',
-  fontSize: 12,
-  color: 'var(--text-muted-dark)',
-  fontStyle: 'italic',
-  textAlign: 'center',
-  margin: '12px 0 0',
-};
