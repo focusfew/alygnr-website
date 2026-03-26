@@ -24,6 +24,7 @@ export default function PlatformCTA() {
             label="Request early access →"
             variant="primary"
             className="platform-cta-btn"
+            onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }}
           />
         </div>
 

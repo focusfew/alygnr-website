@@ -6,6 +6,7 @@ import CompanyStatement from '../components/sections/company/CompanyStatement';
 import CompanyEarlyAccess from '../components/sections/company/CompanyEarlyAccess';
 import CompanyCTA from '../components/sections/company/CompanyCTA';
 import Footer from '../components/sections/Footer';
+import RequestAccessModal from '../components/ui/RequestAccessModal';
 
 export default function Company() {
   return (
@@ -17,6 +18,7 @@ export default function Company() {
       <CompanyEarlyAccess />
       <CompanyCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   );
 }

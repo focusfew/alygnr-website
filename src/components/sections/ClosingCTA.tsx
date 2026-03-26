@@ -19,7 +19,7 @@ export default function ClosingCTA() {
         </p>
 
         <div style={{ ...ctaRow, ...reveal(2) }} className="ccta-ctas">
-          <CTAButton href="#request" label="Request early access →" variant="primary" className="ccta-primary" />
+          <CTAButton href="#request" label="Request early access →" variant="primary" className="ccta-primary" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }} />
           <CTAButton href="/platform" label="See how it works" variant="secondary" className="ccta-secondary" />
         </div>
       </div>

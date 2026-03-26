@@ -34,7 +34,7 @@ export default function Hero() {
 
         {/* 4 — CTAs */}
         <div className="hero-ctas" style={{ ...ctaRow, ...reveal(3) }}>
-          <CTAButton href="#request" label="Request early access →" variant="primary" className="hero-cta-primary" />
+          <CTAButton href="#request" label="Request early access →" variant="primary" className="hero-cta-primary" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }} />
           <CTAButton href="/platform" label="See how it works" variant="secondary" className="hero-cta-secondary" />
         </div>
 

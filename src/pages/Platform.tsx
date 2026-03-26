@@ -9,6 +9,7 @@ import PlatformBeforeAfter from '../components/sections/platform/PlatformBeforeA
 import WhyTrustThis from '../components/sections/platform/WhyTrustThis';
 import PlatformCTA from '../components/sections/platform/PlatformCTA';
 import Footer from '../components/sections/Footer';
+import RequestAccessModal from '../components/ui/RequestAccessModal';
 
 export default function Platform() {
   return (
@@ -23,6 +24,7 @@ export default function Platform() {
       <WhyTrustThis />
       <PlatformCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   );
 }

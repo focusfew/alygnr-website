@@ -7,6 +7,7 @@ import EnterpriseGovernance from '../components/sections/icp/EnterpriseGovernanc
 import EnterpriseOutcomes from '../components/sections/icp/EnterpriseOutcomes';
 import EnterpriseCTA from '../components/sections/icp/EnterpriseCTA';
 import Footer from '../components/sections/Footer';
+import RequestAccessModal from '../components/ui/RequestAccessModal';
 
 export default function Enterprise() {
   return (
@@ -24,6 +25,7 @@ export default function Enterprise() {
       <EnterpriseOutcomes />
       <EnterpriseCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   );
 }

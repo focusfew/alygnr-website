@@ -9,7 +9,7 @@ export default function Footer() {
         {/* left — logo + tagline */}
         <div style={leftCol}>
           <a href="/" style={logoLink}>
-            <img src={logoSrc} alt="ALYGNR" style={{ height: 30, width: 'auto' }} />
+            <img src={logoSrc} alt="ALYGNR" style={{ height: 15, width: 'auto' }} />
           </a>
           <p style={tagline}>The GTM Operating System that builds predictable pipeline.</p>
         </div>

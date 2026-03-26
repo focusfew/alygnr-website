@@ -10,6 +10,7 @@ import Trust from './components/sections/Trust'
 import WhoItsFor from './components/sections/WhoItsFor'
 import ClosingCTA from './components/sections/ClosingCTA'
 import Footer from './components/sections/Footer'
+import RequestAccessModal from './components/ui/RequestAccessModal'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <WhoItsFor />
       <ClosingCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   )
 }

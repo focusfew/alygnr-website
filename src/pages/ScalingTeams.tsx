@@ -6,6 +6,7 @@ import ICPLoop from '../components/sections/icp/ICPLoop';
 import ScalingTeamsOutcomes from '../components/sections/icp/ScalingTeamsOutcomes';
 import ScalingTeamsCTA from '../components/sections/icp/ScalingTeamsCTA';
 import Footer from '../components/sections/Footer';
+import RequestAccessModal from '../components/ui/RequestAccessModal';
 
 export default function ScalingTeams() {
   return (
@@ -22,6 +23,7 @@ export default function ScalingTeams() {
       <ScalingTeamsOutcomes />
       <ScalingTeamsCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   );
 }

@@ -103,6 +103,11 @@ export default function Nav({ activePage }: NavProps) {
     dropdownTimeout.current = setTimeout(() => setDropdownOpen(false), 120);
   };
 
+  const openRequestModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent('open-request-modal'));
+  };
+
   return (
     <>
       <nav
@@ -124,7 +129,7 @@ export default function Nav({ activePage }: NavProps) {
       >
         {/* ── logo ── */}
         <a href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <img src={logoSrc} alt="ALYGNR" style={{ height: 30, width: 'auto' }} />
+          <img src={logoSrc} alt="ALYGNR" style={{ height: 21, width: 'auto' }} />
         </a>
 
         {/* ── desktop centre links ── */}
@@ -238,7 +243,7 @@ export default function Nav({ activePage }: NavProps) {
         </div>
 
         {/* ── desktop CTA ── */}
-        <a href="#request" style={ctaStyle} className="nav-desktop nav-cta">
+        <a href="#request" style={ctaStyle} className="nav-desktop nav-cta" onClick={openRequestModal}>
           Request early access
         </a>
 
@@ -350,7 +355,7 @@ export default function Nav({ activePage }: NavProps) {
         <div style={{ marginTop: 'auto', paddingBottom: 32 }}>
           <a
             href="#request"
-            onClick={() => setMobileOpen(false)}
+            onClick={(e) => { openRequestModal(e); setMobileOpen(false); }}
             style={{ ...ctaStyle, display: 'block', textAlign: 'center' as const }}
           >
             Request early access

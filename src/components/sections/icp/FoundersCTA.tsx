@@ -18,7 +18,7 @@ export default function FoundersCTA() {
         </p>
 
         <div style={reveal(2)}>
-          <CTAButton href="#request" label="Get early access →" variant="primary" />
+          <CTAButton href="#request" label="Get early access →" variant="primary" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }} />
         </div>
 
         <p style={{ ...footnote, ...reveal(3) }}>

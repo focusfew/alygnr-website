@@ -7,6 +7,7 @@ import AgenciesMultiClient from '../components/sections/icp/AgenciesMultiClient'
 import AgenciesOutcomes from '../components/sections/icp/AgenciesOutcomes';
 import AgenciesCTA from '../components/sections/icp/AgenciesCTA';
 import Footer from '../components/sections/Footer';
+import RequestAccessModal from '../components/ui/RequestAccessModal';
 
 export default function Agencies() {
   return (
@@ -24,6 +25,7 @@ export default function Agencies() {
       <AgenciesOutcomes />
       <AgenciesCTA />
       <Footer />
+      <RequestAccessModal />
     </PageWrapper>
   );
 }

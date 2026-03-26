@@ -6,7 +6,7 @@ export default function PlatformLoop() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="cream">
+    <SectionWrapper bg="cream" padding="32px 24px">
       <div ref={ref} id="how-it-works" style={wrapper}>
         {/* eyebrow */}
         <div className="eyebrow eyebrow-light" style={reveal(0)}>

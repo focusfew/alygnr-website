@@ -5,7 +5,7 @@ export default function ProductInPractice() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="cream" padding="80px 0 112px">
+    <SectionWrapper bg="cream" padding="32px 24px 56px">
       <div ref={ref} style={wrapper}>
         {/* eyebrow */}
         <div className="eyebrow eyebrow-light" style={reveal(0)}>
