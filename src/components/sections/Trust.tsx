@@ -7,12 +7,12 @@ const quotes = [
     title: 'Founder & Chief Executive Officer',
     company: 'Mithi',
   },
-  {
-    text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream more predictable — including the pipeline.',
-    name: 'Anubhav Dwivedi',
-    title: 'Founder & CEO',
-    company: 'The Machine Intelligence Company',
-  },
+  // {
+  //   text: 'The frameworks changed how we approached buyer conversations. Better strategy upstream and a structured way to think about who we were talking to made everything downstream more predictable — including the pipeline.',
+  //   name: 'Anubhav Dwivedi',
+  //   title: 'Founder & CEO',
+  //   company: 'The Machine Intelligence Company',
+  // },
 ] as const;
 
 export default function Trust() {
@@ -39,10 +39,7 @@ export default function Trust() {
       </div>
 
       <style>{`
-        .trust-grid { grid-template-columns: 1fr 1fr; }
-        @media (max-width: 768px) {
-          .trust-grid { grid-template-columns: 1fr !important; }
-        }
+        .trust-grid { grid-template-columns: 1fr; }
       `}</style>
     </section>
   );
@@ -56,7 +53,7 @@ const section: React.CSSProperties = {
 const grid: React.CSSProperties = {
   display: 'grid',
   gap: 24,
-  maxWidth: 1000,
+  maxWidth: 680,
   margin: '0 auto',
 };
 

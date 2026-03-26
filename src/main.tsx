@@ -9,6 +9,8 @@ import ScalingTeams from './pages/ScalingTeams.tsx'
 import Enterprise from './pages/Enterprise.tsx'
 import Agencies from './pages/Agencies.tsx'
 import Company from './pages/Company.tsx'
+import Privacy from './pages/Privacy.tsx'
+import Terms from './pages/Terms.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/enterprise" element={<Enterprise />} />
         <Route path="/agencies" element={<Agencies />} />
         <Route path="/company" element={<Company />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

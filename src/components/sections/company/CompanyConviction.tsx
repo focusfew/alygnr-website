@@ -5,7 +5,7 @@ export default function CompanyConviction() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black" padding="var(--section-padding-standard)">
+    <SectionWrapper bg="black" padding="0px 24px 56px">
       <div ref={ref} style={wrapper}>
         <div className="eyebrow eyebrow-dark" style={reveal(0)}>
           WHY WE BUILT THIS
