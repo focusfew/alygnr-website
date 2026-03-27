@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logoSrc from '../../assets/logo4.png';
 
 export default function Footer() {
@@ -8,9 +9,9 @@ export default function Footer() {
       <div style={inner} className="footer-inner">
         {/* left — logo + tagline */}
         <div style={leftCol}>
-          <a href="/" style={logoLink}>
+          <Link to="/" style={logoLink}>
             <img src={logoSrc} alt="ALYGNR" style={{ height: 15, width: 'auto' }} />
-          </a>
+          </Link>
           <p style={tagline}>The GTM Operating System that builds predictable pipeline.</p>
         </div>
 
@@ -18,15 +19,15 @@ export default function Footer() {
         <div style={navCols} className="footer-nav">
           <div>
             <p style={colHeader}>Platform</p>
-            <a href="/platform" style={navLink}>How it works</a>
+            <Link to="/platform" style={navLink}>How it works</Link>
             <a href="/#integrations" style={navLink}>Integrations</a>
           </div>
           <div>
             <p style={colHeader}>ALYGNR for</p>
-            <a href="/founders" style={navLink}>Founder-led teams</a>
-            <a href="/scaling-teams" style={navLink}>Scaling GTM Teams</a>
-            <a href="/enterprise" style={navLink}>Enterprise GTM</a>
-            <a href="/agencies" style={navLink}>Agencies</a>
+            <Link to="/founders" style={navLink}>Founder-led teams</Link>
+            <Link to="/scaling-teams" style={navLink}>Scaling GTM Teams</Link>
+            <Link to="/enterprise" style={navLink}>Enterprise GTM</Link>
+            <Link to="/agencies" style={navLink}>Agencies</Link>
           </div>
           <div>
             <p style={colHeader}>Company</p>
@@ -35,8 +36,8 @@ export default function Footer() {
           </div>
           <div>
             <p style={colHeader}>Legal</p>
-            <a href="/privacy" style={navLink}>Privacy</a>
-            <a href="/terms" style={navLink}>Terms</a>
+            <Link to="/privacy" style={navLink}>Privacy</Link>
+            <Link to="/terms" style={navLink}>Terms</Link>
           </div>
         </div>
       </div>

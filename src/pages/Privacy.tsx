@@ -55,7 +55,7 @@ export default function Privacy() {
           <h1 style={{ ...headline, ...reveal(1) }}>Privacy Policy</h1>
           <p style={{ ...updated, ...reveal(2) }}>Last updated: March 2026</p>
 
-          {sections.map((s, i) => (
+          {sections.map((s) => (
             <div key={s.heading} style={reveal(3)}>
               <h2 style={sectionHeading}>{s.heading}</h2>
               <p style={sectionBody}>{s.body}</p>
