@@ -87,7 +87,6 @@ export default function SystemLoop() {
             gap: 32px !important;
           }
           .system-loop-img-col {
-            order: -1 !important;
             margin-top: 0 !important;
           }
           .system-loop-img-col img {
