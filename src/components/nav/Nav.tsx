@@ -72,7 +72,7 @@ function MenuIcon({ open }: { open: boolean }) {
 
 /* ───────── main nav ───────── */
 interface NavProps {
-  activePage?: 'home' | 'platform' | 'founders' | 'scaling-teams' | 'enterprise' | 'agencies' | 'company';
+  activePage?: 'home' | 'platform' | 'pricing' | 'founders' | 'scaling-teams' | 'enterprise' | 'agencies' | 'company';
 }
 
 export default function Nav({ activePage }: NavProps) {
@@ -147,6 +147,13 @@ export default function Nav({ activePage }: NavProps) {
             style={activePage === 'platform' ? { ...linkBase, ...activePill } : linkBase}
           >
             Platform
+          </a>
+
+          <a
+            href="/pricing"
+            style={activePage === 'pricing' ? { ...linkBase, ...activePill } : linkBase}
+          >
+            Pricing
           </a>
 
           {/* ALYGNR for dropdown */}
@@ -288,6 +295,14 @@ export default function Nav({ activePage }: NavProps) {
           style={activePage === 'platform' ? { ...mobileLinkStyle, ...activePill } : mobileLinkStyle}
         >
           Platform
+        </a>
+
+        <a
+          href="/pricing"
+          onClick={() => setMobileOpen(false)}
+          style={activePage === 'pricing' ? { ...mobileLinkStyle, ...activePill } : mobileLinkStyle}
+        >
+          Pricing
         </a>
 
         {/* mobile submenu trigger */}

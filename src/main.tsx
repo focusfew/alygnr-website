@@ -8,6 +8,7 @@ import Founders from './pages/Founders.tsx'
 import ScalingTeams from './pages/ScalingTeams.tsx'
 import Enterprise from './pages/Enterprise.tsx'
 import Agencies from './pages/Agencies.tsx'
+import Pricing from './pages/Pricing.tsx'
 import Company from './pages/Company.tsx'
 import Privacy from './pages/Privacy.tsx'
 import Terms from './pages/Terms.tsx'
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/platform" element={<Platform />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/founders" element={<Founders />} />
         <Route path="/scaling-teams" element={<ScalingTeams />} />
         <Route path="/enterprise" element={<Enterprise />} />

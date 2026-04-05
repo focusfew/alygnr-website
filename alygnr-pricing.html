@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALYGNR — Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07090E;
+      --surface: #0D1018;
+      --surface-2: #131620;
+      --border: rgba(255,255,255,0.07);
+      --border-md: rgba(255,255,255,0.13);
+      --border-feat: #2F6FEB;
+      --text-primary: #EDEEEF;
+      --text-secondary: #8A8F9A;
+      --text-tertiary: #4E545F;
+      --check: #4ADE80;
+      --badge-fp-bg: rgba(74,222,128,0.1);
+      --badge-fp-text: #4ADE80;
+      --badge-pop-bg: rgba(47,111,235,0.15);
+      --badge-pop-text: #7AABFF;
+      --feat-head-bg: rgba(47,111,235,0.06);
+      --tooltip-bg: #1C2030;
+      --tooltip-text: #C8CDD6;
+      --radius: 8px;
+      --radius-lg: 12px;
+    }
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    .wrapper { max-width: 980px; margin: 0 auto; padding: 64px 24px 96px; }
+
+    /* Page header */
+    .wordmark { font-size: 14px; font-weight: 600; letter-spacing: 0.1em; color: var(--text-primary); margin-bottom: 36px; display: block; }
+    .page-title { font-size: 34px; font-weight: 400; letter-spacing: -0.022em; color: var(--text-primary); margin-bottom: 12px; line-height: 1.15; }
+    .page-subtitle { font-size: 15px; color: var(--text-secondary); line-height: 1.65; max-width: 540px; margin-bottom: 44px; }
+
+    /* Table wrapper */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; min-width: 660px; font-size: 13px; }
+    td, th { border: 1px solid var(--border); padding: 10px 14px; vertical-align: middle; line-height: 1.4; }
+
+    /* Tier headers */
+    .col-label { text-align: left; font-weight: 400; font-size: 11px; color: var(--text-tertiary); background: var(--surface); }
+    .tier-head { text-align: center; vertical-align: top; padding: 18px 12px; background: var(--surface); }
+    .tier-name { font-size: 14px; font-weight: 500; color: var(--text-primary); display: block; margin-bottom: 3px; }
+    .tier-users { font-size: 11px; color: var(--text-tertiary); display: block; }
+
+    /* Featured column */
+    .fea { border-left: 2px solid var(--border-feat) !important; border-right: 2px solid var(--border-feat) !important; }
+    .fea-top { border-top: 2px solid var(--border-feat) !important; background: var(--feat-head-bg) !important; }
+    .fea-bot { border-bottom: 2px solid var(--border-feat) !important; }
+
+    /* Feature label column */
+    .feat-col { color: var(--text-secondary); font-size: 13px; min-width: 200px; }
+
+    /* Section rows */
+    .sec-row td { background: var(--surface-2); font-size: 10px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; padding: 7px 14px; }
+
+    /* Cell value types */
+    .check-cell { text-align: center; color: var(--check); font-size: 14px; }
+    .dash-cell { text-align: center; color: var(--text-tertiary); font-size: 13px; }
+    .val-cell { text-align: center; color: var(--text-primary); font-size: 12px; }
+
+    /* Badges */
+    .badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 99px; margin-bottom: 8px; }
+    .badge-fp { background: var(--badge-fp-bg); color: var(--badge-fp-text); }
+    .badge-pop { background: var(--badge-pop-bg); color: var(--badge-pop-text); }
+
+    /* Buttons */
+    .btn-p { background: var(--text-primary); color: var(--bg); border: none; padding: 9px 0; border-radius: var(--radius); font-size: 12px; font-weight: 500; cursor: pointer; width: 100%; font-family: inherit; transition: opacity 0.15s; }
+    .btn-p:hover { opacity: 0.85; }
+    .btn-t { background: transparent; color: var(--text-secondary); border: 1px solid var(--border-md); padding: 9px 0; border-radius: var(--radius); font-size: 12px; cursor: pointer; width: 100%; font-family: inherit; transition: border-color 0.15s, color 0.15s; }
+    .btn-t:hover { border-color: rgba(255,255,255,0.28); color: var(--text-primary); }
+    .cta-td { padding: 12px 10px !important; background: var(--surface) !important; }
+
+    /* Info icon + tooltip */
+    .info-wrap { position: relative; display: inline-flex; align-items: center; vertical-align: middle; margin-left: 5px; }
+    .info-icon { width: 13px; height: 13px; border-radius: 50%; border: 1px solid var(--text-tertiary); color: var(--text-tertiary); font-size: 8px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; cursor: default; user-select: none; flex-shrink: 0; }
+    .tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: 240px; background: var(--tooltip-bg); color: var(--tooltip-text); font-size: 12px; line-height: 1.6; padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--border-md); z-index: 200; pointer-events: none; white-space: normal; text-align: left; font-weight: 400; }
+    .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--tooltip-bg); }
+    .info-wrap:hover .tooltip { display: block; }
+
+    /* Agency section */
+    .section-gap { margin-top: 56px; }
+    .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; margin-bottom: 8px; }
+    .agency-title { font-size: 22px; font-weight: 400; letter-spacing: -0.015em; color: var(--text-primary); margin-bottom: 8px; }
+    .agency-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; max-width: 520px; margin-bottom: 24px; }
+    .agency-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; background: var(--surface); display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px; }
+    .agency-col-title { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; margin-bottom: 14px; }
+    .agency-feature { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 11px; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    .agency-feature .ck { color: var(--check); font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+    .agency-cta { grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .agency-cta-note { font-size: 12px; color: var(--text-tertiary); line-height: 1.5; }
+    .btn-agency { background: transparent; color: var(--text-primary); border: 1px solid var(--border-md); padding: 9px 20px; border-radius: var(--radius); font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; white-space: nowrap; transition: border-color 0.15s; }
+    .btn-agency:hover { border-color: rgba(255,255,255,0.3); }
+
+    /* Footer */
+    .footer-note { margin-top: 40px; font-size: 12px; color: var(--text-tertiary); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 28px; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <span class="wordmark">ALYGNR</span>
+  <h1 class="page-title">Straightforward pricing.<br>Strategic value.</h1>
+  <p class="page-subtitle">Every plan includes the full orchestration loop — Messaging Foundation, Blueprint, GTM Plays, and Assets. Tiers unlock team depth, intelligence, and governance.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-label">Features</th>
+          <th class="tier-head">
+            <span class="badge badge-fp">Founding Partner</span>
+            <span class="tier-name">Founder</span>
+            <span class="tier-users">1–2 users</span>
+          </th>
+          <th class="tier-head fea fea-top">
+            <span class="badge badge-pop">Most popular</span>
+            <span class="tier-name">Team</span>
+            <span class="tier-users">Up to 5 users</span>
+          </th>
+          <th class="tier-head">
+            <span class="badge badge-fp">Founding Partner</span>
+            <span class="tier-name">Scale</span>
+            <span class="tier-users">Up to 10 users</span>
+          </th>
+          <th class="tier-head">
+            <span class="tier-name" style="margin-top: 23px;">Enterprise</span>
+            <span class="tier-users">Custom users</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- CORE ORCHESTRATION -->
+        <tr class="sec-row"><td colspan="5">Core Orchestration</td></tr>
+        <tr>
+          <td class="feat-col">Active Strategic Intents
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">How many marketing initiatives ALYGNR is actively orchestrating for you at once. When one wraps up, archive it and start the next — there's no monthly limit, just a cap on parallel activity.</span>
+            </span>
+          </td>
+          <td class="val-cell">1</td><td class="val-cell fea">3</td><td class="val-cell">Unlimited</td><td class="val-cell">Unlimited</td>
+        </tr>
+        <tr>
+          <td class="feat-col">GTM Plays per Intent
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">The individual execution activities within a campaign — a LinkedIn content push, an email sequence, a paid ads run. Each play has its own content, messaging, and channel focus.</span>
+            </span>
+          </td>
+          <td class="val-cell">Up to 6</td><td class="val-cell fea">Up to 15</td><td class="val-cell">Unlimited</td><td class="val-cell">Unlimited</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Messaging Foundation
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Your company's strategic context — positioning, value propositions, target customers, and communication guidelines. ALYGNR uses this to make sure everything it creates stays consistent and on-brand.</span>
+            </span>
+          </td>
+          <td class="check-cell">✓</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Blueprint Generation
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Based on your campaign goal, ALYGNR recommends a structured marketing plan — which plays to run, in what sequence, and what content each one needs. You review and adjust before execution begins.</span>
+            </span>
+          </td>
+          <td class="check-cell">✓</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+
+        <!-- EXECUTION -->
+        <tr class="sec-row"><td colspan="5">Execution</td></tr>
+        <tr>
+          <td class="feat-col">Asset Generation</td>
+          <td class="val-cell">Unlimited</td><td class="val-cell fea">Unlimited</td><td class="val-cell">Unlimited</td><td class="val-cell">Unlimited</td>
+        </tr>
+        <tr>
+          <td class="feat-col">First-class Asset Types
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">The 8 content formats ALYGNR generates with full editing, variant, and approval support: LinkedIn posts, email sequences, sales outreach, landing page copy, one-pagers, case studies, competitor comparisons, and LinkedIn ads.</span>
+            </span>
+          </td>
+          <td class="val-cell">All 8</td><td class="val-cell fea">All 8</td><td class="val-cell">All 8</td><td class="val-cell">All 8</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Assisted Publishing
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Packages your approved content with labels, metadata, and a publishing checklist — organised and ready to push to LinkedIn, your CRM, or your website.</span>
+            </span>
+          </td>
+          <td class="check-cell">✓</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+
+        <!-- INTELLIGENCE -->
+        <tr class="sec-row"><td colspan="5">Intelligence</td></tr>
+        <tr>
+          <td class="feat-col">ALYGNR Score
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">A 0–100 health score for your marketing setup — measuring whether your campaigns are well-structured, consistently executed, and covering the right stages of the buyer journey.</span>
+            </span>
+          </td>
+          <td class="check-cell">✓</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Full Insights Cockpit
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">A live view of where your marketing has gaps — broken down by funnel stage, with a prioritised list of issues and suggested fixes. Moves you from "something feels off" to knowing exactly what to address.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Fix Flows & Optimisation
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Actionable fixes surfaced directly from your Insights — generate missing content, patch coverage gaps, resolve inconsistencies. Each fix is a specific action, not a recommendation to think about.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Marketing Performance Analytics
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Upload a simple data export from LinkedIn, Google, or your email tool, and ALYGNR connects the dots — showing you which content and campaigns are actually driving results, and which aren't pulling their weight.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+
+        <!-- GOVERNANCE -->
+        <tr class="sec-row"><td colspan="5">Governance</td></tr>
+        <tr>
+          <td class="feat-col">Approval Workflows
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">A structured review process for content before it goes live. Assign reviewers, track sign-off status, and keep a clear record of what was approved, by whom, and when.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Activity Log
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">A complete history of everything that's happened in your account — edits, approvals, generations, and publishes. Useful for team visibility and keeping track of what changed.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="check-cell fea">✓</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Role-based Access Control
+            <span class="info-wrap"><span class="info-icon">i</span>
+              <span class="tooltip">Set permissions per team member — who can configure the account, who can create campaigns, and who can only review and approve content.</span>
+            </span>
+          </td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">SSO / SAML</td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="dash-cell">—</td><td class="check-cell">✓</td>
+        </tr>
+
+        <!-- SUPPORT & ONBOARDING -->
+        <tr class="sec-row"><td colspan="5">Support & Onboarding</td></tr>
+        <tr>
+          <td class="feat-col">Strategy Configuration Call</td>
+          <td class="dash-cell">—</td>
+          <td class="val-cell fea" style="font-size:11px; color: var(--text-secondary);">45–60 min</td>
+          <td class="val-cell" style="font-size:11px; color: var(--text-secondary);">45–60 min</td>
+          <td class="val-cell" style="font-size:11px; color: var(--text-secondary);">45–60 min</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Onboarding & Training Call</td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Priority Support</td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="check-cell">✓</td><td class="check-cell">✓</td>
+        </tr>
+        <tr>
+          <td class="feat-col">Dedicated Customer Success</td>
+          <td class="dash-cell">—</td><td class="dash-cell fea">—</td><td class="dash-cell">—</td><td class="check-cell">✓</td>
+        </tr>
+
+        <!-- CTA row -->
+        <tr>
+          <td class="cta-td" style="border: 1px solid var(--border);"></td>
+          <td class="cta-td"><button class="btn-p">Apply for Access</button></td>
+          <td class="cta-td fea fea-bot"><button class="btn-p">Apply for Access</button></td>
+          <td class="cta-td"><button class="btn-t">Talk to Us</button></td>
+          <td class="cta-td"><button class="btn-t">Talk to Us</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Agency Section -->
+  <div class="section-gap">
+    <p class="section-label">For Agencies</p>
+    <h2 class="agency-title">Built for teams running multiple clients.</h2>
+    <p class="agency-desc">Agency mode gives you a dedicated multi-client workspace — separate environments per client, all managed from one place. Everything in Scale, plus the tools to run GTM at portfolio scale.</p>
+    <div class="agency-card">
+      <div>
+        <p class="agency-col-title">Everything in Scale, plus</p>
+        <div class="agency-feature"><span class="ck">✓</span><span>Multi-client workspace — separate, isolated environments per client</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Client-level Messaging Foundation and ICP configuration</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Client reporting and exportable performance summaries</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Custom user count across client environments</span></div>
+      </div>
+      <div>
+        <p class="agency-col-title">Designed for</p>
+        <div class="agency-feature"><span class="ck">✓</span><span>B2B marketing agencies managing 3+ client GTM programmes</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Fractional CMO and GTM advisory practices</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Growth consultancies running account-based programmes</span></div>
+        <div class="agency-feature"><span class="ck">✓</span><span>Teams that need portfolio-level visibility across accounts</span></div>
+      </div>
+      <div class="agency-cta">
+        <span class="agency-cta-note">Agency pricing is custom. Contact us to discuss your client portfolio and team structure.</span>
+        <button class="btn-agency">Talk to Us →</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    Founding Partner pricing is available for early cohort members — limited spots. All pricing is discussed during onboarding. Plans include a 14-day trial with full platform access.<br>
+    ALYGNR is a GTM Intelligence Operating System. Not a content tool, not a campaign manager — a strategic orchestration layer that turns alignment into predictable pipeline.
+  </p>
+
+</div>
+</body>
+</html>
