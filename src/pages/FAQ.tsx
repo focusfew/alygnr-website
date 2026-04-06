@@ -24,7 +24,7 @@ const groups: FAQGroup[] = [
     items: [
       {
         question: 'What is ALYGNR?',
-        answer: 'ALYGNR is a GTM Operating System — a platform that connects your marketing strategy to your execution and then closes the loop with intelligence. It is not a content tool, a campaign manager, or a CRM. It is the layer that sits above your existing tools and ensures that every campaign, asset, and message traces back to a defined strategic intent.',
+        answer: 'ALYGNR orchestrates your go-to-market — connecting the strategy your team decides to the campaigns that ship, and closing the loop with the intelligence that makes the next cycle better. It is not a content tool, a campaign manager, or a CRM. It sits above your existing tools and ensures that every campaign, asset, and message traces back to a defined strategic intent — and that execution produces structured intelligence, not just performance data.',
       },
       {
         question: 'How is ALYGNR different from a marketing automation platform?',
@@ -115,7 +115,7 @@ const groups: FAQGroup[] = [
       },
       {
         question: 'What tools does ALYGNR integrate with?',
-        answer: 'ALYGNR currently integrates with HubSpot, Salesforce, LinkedIn, Slack, Mailchimp, and Google Analytics 4. Google Ads integration is coming soon. ALYGNR sits above your existing tool stack — it governs strategy and generates assets that you then distribute through the tools you already use.',
+        answer: 'ALYGNR is designed to work alongside the tools your team already uses — including HubSpot, Salesforce, LinkedIn, Slack, Mailchimp, and Google Analytics 4. We are actively expanding our integrations and would love to know which platforms matter most to your team. When you request access, tell us what is in your stack and we will prioritise accordingly.',
       },
     ],
   },
