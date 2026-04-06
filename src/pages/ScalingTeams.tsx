@@ -1,3 +1,4 @@
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import ScalingTeamsHero from '../components/sections/icp/ScalingTeamsHero';
@@ -11,6 +12,11 @@ import RequestAccessModal from '../components/ui/RequestAccessModal';
 export default function ScalingTeams() {
   return (
     <PageWrapper>
+      <SEO
+        title="For Scaling GTM Teams"
+        description="Give your growing marketing team a shared strategic foundation. ALYGNR keeps every campaign aligned to intent — so execution compounds instead of resets."
+        canonical="/scaling-teams"
+      />
       <Nav activePage="scaling-teams" />
       <ScalingTeamsHero />
       <ScalingTeamsProblem />

@@ -1,3 +1,4 @@
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import Footer from '../components/sections/Footer';
@@ -48,6 +49,11 @@ export default function Privacy() {
 
   return (
     <PageWrapper>
+      <SEO
+        title="Privacy Policy"
+        description="ALYGNR privacy policy — how we collect, use, and protect your information."
+        canonical="/privacy"
+      />
       <Nav />
       <section style={sectionStyle}>
         <div ref={ref} style={container}>

@@ -1,3 +1,4 @@
+import SEO from './components/ui/SEO'
 import PageWrapper from './components/layout/PageWrapper'
 import Nav from './components/nav/Nav'
 import Hero from './components/sections/Hero'
@@ -15,6 +16,11 @@ import RequestAccessModal from './components/ui/RequestAccessModal'
 export default function App() {
   return (
     <PageWrapper>
+      <SEO
+        title="The GTM Operating System"
+        description="ALYGNR turns strategic alignment into predictable pipeline. The GTM Intelligence Operating System for B2B marketing teams, enterprises, and agencies."
+        canonical="/"
+      />
       <Nav />
       <Hero />
       <Problem />

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import SectionWrapper from '../components/layout/SectionWrapper';
@@ -361,6 +362,11 @@ const footnote: React.CSSProperties = {
 export default function Certification() {
   return (
     <PageWrapper>
+      <SEO
+        title="Certification Programme"
+        description="Become the person who makes GTM work. The ALYGNR Certification Programme for B2B marketers who want to go from executing tasks to owning strategy."
+        canonical="/certification"
+      />
       <Nav />
       <Hero />
       <TierCards />

@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import SectionWrapper from '../components/layout/SectionWrapper';
+import PricingFAQ from '../components/sections/platform/PricingFAQ';
 import Footer from '../components/sections/Footer';
 import RequestAccessModal from '../components/ui/RequestAccessModal';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -307,6 +309,11 @@ export default function Pricing() {
 
   return (
     <PageWrapper>
+      <SEO
+        title="Pricing"
+        description="Simple, transparent pricing for B2B marketing teams. From founder-led to enterprise — every plan includes the full GTM orchestration loop."
+        canonical="/pricing"
+      />
       <Nav activePage="pricing" />
 
       {/* ── Hero (cream bg) ── */}
@@ -466,6 +473,7 @@ export default function Pricing() {
         </div>
       </SectionWrapper>
 
+      <PricingFAQ />
       <Footer />
       <RequestAccessModal />
 

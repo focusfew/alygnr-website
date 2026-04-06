@@ -73,7 +73,7 @@ export default function SystemLoop() {
         <div className="system-loop-img-col" style={{ marginTop: 44 }}>
           <img
             src={loopVertical}
-            alt="ALYGNR Operating Loop"
+            alt="ALYGNR operating loop diagram showing six connected layers: Strategic Intent, Blueprint, GTM Plays, Assets, Insights, and Optimization"
             style={{ width: 480, maxWidth: '100%', height: 'auto', display: 'block' }}
           />
         </div>

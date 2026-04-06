@@ -1,3 +1,4 @@
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import Footer from '../components/sections/Footer';
@@ -48,6 +49,11 @@ export default function Terms() {
 
   return (
     <PageWrapper>
+      <SEO
+        title="Terms of Service"
+        description="ALYGNR terms of service — the terms that govern use of our website and platform."
+        canonical="/terms"
+      />
       <Nav />
       <section style={sectionStyle}>
         <div ref={ref} style={container}>

@@ -32,7 +32,7 @@ export default function ICPLoop({
         <div style={{ ...diagramWrap, ...reveal(3) }}>
           <img
             src={loopHorizontalSimple}
-            alt="ALYGNR Operating Loop — six layers from Strategic Intent to Optimization"
+            alt="ALYGNR GTM operating loop — six connected layers: Strategic Intent, Blueprint, GTM Plays, Assets, Insights, Optimization"
             className="icp-loop-img"
             style={diagramImg}
           />

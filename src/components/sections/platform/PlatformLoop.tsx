@@ -28,7 +28,7 @@ export default function PlatformLoop() {
         <div style={{ ...diagramWrap, ...reveal(3) }}>
           <img
             src={loopHorizontalFull}
-            alt="ALYGNR Operating Loop — six layers from Strategic Intent to Optimization"
+            alt="ALYGNR platform operating loop — six layers from Strategic Intent to Optimization forming a connected intelligence system"
             className="platform-loop-img"
             style={diagramImg}
           />

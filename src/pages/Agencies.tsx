@@ -1,3 +1,4 @@
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import AgenciesHero from '../components/sections/icp/AgenciesHero';
@@ -12,6 +13,11 @@ import RequestAccessModal from '../components/ui/RequestAccessModal';
 export default function Agencies() {
   return (
     <PageWrapper>
+      <SEO
+        title="For B2B Agencies"
+        description="Run structured, repeatable GTM strategy across every client. ALYGNR gives B2B agencies a system that scales without rebuilding from scratch each time."
+        canonical="/agencies"
+      />
       <Nav activePage="agencies" />
       <AgenciesHero />
       <AgenciesProblem />

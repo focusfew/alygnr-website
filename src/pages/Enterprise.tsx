@@ -1,3 +1,4 @@
+import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
 import Nav from '../components/nav/Nav';
 import EnterpriseHero from '../components/sections/icp/EnterpriseHero';
@@ -12,6 +13,11 @@ import RequestAccessModal from '../components/ui/RequestAccessModal';
 export default function Enterprise() {
   return (
     <PageWrapper>
+      <SEO
+        title="For Enterprise GTM"
+        description="GTM governance and strategic alignment at scale. ALYGNR gives enterprise marketing teams the orchestration layer that keeps every team, market, and message aligned."
+        canonical="/enterprise"
+      />
       <Nav activePage="enterprise" />
       <EnterpriseHero />
       <EnterpriseProblem />
