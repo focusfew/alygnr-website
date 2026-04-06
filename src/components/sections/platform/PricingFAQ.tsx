@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: 'What tools does ALYGNR integrate with?',
-    answer: 'ALYGNR currently integrates with HubSpot, Salesforce, LinkedIn, Slack, Mailchimp, and Google Analytics 4. Google Ads integration is coming soon. ALYGNR sits above your existing tool stack — it governs strategy and generates assets that you then distribute through the tools you already use.',
+    answer: 'ALYGNR is designed to work alongside the tools your team already uses — including HubSpot, Salesforce, LinkedIn, Slack, Mailchimp, and Google Analytics 4. We are actively expanding our integrations and would love to know which platforms matter most to your team. When you request access, tell us what is in your stack and we will prioritise accordingly.',
   },
 ];
 

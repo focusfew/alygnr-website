@@ -5,7 +5,7 @@ import { useScrollReveal } from '../../../hooks/useScrollReveal';
 const faqs = [
   {
     question: 'What is ALYGNR?',
-    answer: 'ALYGNR is a GTM Operating System — a platform that connects your marketing strategy to your execution and then closes the loop with intelligence. It is not a content tool, a campaign manager, or a CRM. It is the layer that sits above your existing tools and ensures that every campaign, asset, and message traces back to a defined strategic intent.',
+    answer: 'ALYGNR orchestrates your go-to-market — connecting the strategy your team decides to the campaigns that ship, and closing the loop with the intelligence that makes the next cycle better. It is not a content tool, a campaign manager, or a CRM. It sits above your existing tools and ensures that every campaign, asset, and message traces back to a defined strategic intent — and that execution produces structured intelligence, not just performance data.',
   },
   {
     question: 'Is ALYGNR an AI writing tool?',
