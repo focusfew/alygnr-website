@@ -797,7 +797,7 @@ const agencyCtaRow: React.CSSProperties = {
 
 const agencyCtaNote: React.CSSProperties = {
   fontSize: 12,
-  color: '#4E545F',
+  color: '#8A8F9A',
   lineHeight: 1.5,
   fontFamily: 'var(--font-tight)',
 };
@@ -818,7 +818,7 @@ const btnAgency: React.CSSProperties = {
 
 const footerNote: React.CSSProperties = {
   fontSize: 12,
-  color: '#4E545F',
+  color: '#8A8F9A',
   lineHeight: 1.8,
   borderTop: '1px solid rgba(255,255,255,0.07)',
   paddingTop: 28,
