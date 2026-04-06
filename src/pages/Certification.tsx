@@ -15,7 +15,7 @@ function Hero() {
     <SectionWrapper bg="cream">
       <div ref={ref} style={heroOuter}>
         <div style={heroInner}>
-          <div className="eyebrow eyebrow-light" style={reveal(0)}>
+          <div className="eyebrow eyebrow-light" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
             ALYGNR CERTIFICATION PROGRAMME
           </div>
           <h1 style={{ ...heroHeadline, ...reveal(1) }} className="cert-hero-headline">
@@ -93,7 +93,7 @@ function TierCards() {
   return (
     <SectionWrapper bg="black">
       <div ref={ref} style={tiersWrapper}>
-        <div className="eyebrow eyebrow-dark" style={reveal(0)}>
+        <div className="eyebrow eyebrow-dark" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
           THE PROGRAMME
         </div>
         <h2 style={{ ...tiersHeadline, ...reveal(1) }}>Three levels. One clear path.</h2>
@@ -203,7 +203,7 @@ function WaitlistForm() {
   return (
     <SectionWrapper bg="cream">
       <div ref={ref} style={formSection}>
-        <div className="eyebrow eyebrow-light" style={reveal(0)}>
+        <div className="eyebrow eyebrow-light" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
           JOIN THE WAITLIST
         </div>
         <h2 style={{ ...formHeadline, ...reveal(1) }}>
