@@ -20,7 +20,6 @@ export default function Footer() {
           <div>
             <p style={colHeader}>Platform</p>
             <Link to="/platform" style={navLink}>How it works</Link>
-            <a href="/#integrations" style={navLink}>Integrations</a>
             <Link to="/certification" style={navLink}>Certification</Link>
           </div>
           <div>

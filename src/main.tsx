@@ -1,11 +1,19 @@
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './index.css'
 import { initAnalytics } from './lib/analytics'
 import AnalyticsTracker from './components/AnalyticsTracker'
 
 initAnalytics()
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 import App from './App.tsx'
 import Platform from './pages/Platform.tsx'
 import Founders from './pages/Founders.tsx'
@@ -21,6 +29,7 @@ import Certification from './pages/Certification.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<App />} />
