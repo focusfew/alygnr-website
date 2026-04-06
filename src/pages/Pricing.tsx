@@ -48,6 +48,17 @@ const sections: Section[] = [
         ],
       },
       {
+        label: 'Lines of Business',
+        tooltip:
+          'A Line of Business lets you run separate GTM programmes under one account — each with its own messaging, plays, and assets. Useful if you manage more than one product, brand, or market segment.',
+        cells: [
+          ['val', '1'],
+          ['val', 'Up to 3'],
+          ['val', 'Unlimited'],
+          ['val', 'Unlimited'],
+        ],
+      },
+      {
         label: 'Messaging Foundation',
         tooltip:
           'Your company\u2019s strategic context — positioning, value propositions, target customers, and communication guidelines. ALYGNR uses this to make sure everything it creates stays consistent and on-brand.',
