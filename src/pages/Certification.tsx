@@ -12,10 +12,11 @@ function Hero() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="cream">
+    <SectionWrapper bg="cream" padding="0">
       <div ref={ref} style={heroOuter}>
         <div style={heroInner}>
-          <div className="eyebrow eyebrow-light" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
+          <div className="eyebrow eyebrow-light eyebrow-center" style={{ ...reveal(0) }}>
+            <span className="eyebrow-bar" />
             ALYGNR CERTIFICATION PROGRAMME
           </div>
           <h1 style={{ ...heroHeadline, ...reveal(1) }} className="cert-hero-headline">
@@ -41,8 +42,8 @@ const heroOuter: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingTop: 40,
-  paddingBottom: 80,
+  paddingTop: 56,
+  paddingBottom: 56,
 };
 
 const heroInner: React.CSSProperties = {
@@ -91,9 +92,10 @@ function TierCards() {
   const { ref, reveal } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <SectionWrapper bg="black">
+    <SectionWrapper bg="black" padding="0">
       <div ref={ref} style={tiersWrapper}>
-        <div className="eyebrow eyebrow-dark" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
+        <div className="eyebrow eyebrow-dark eyebrow-center" style={{ ...reveal(0) }}>
+          <span className="eyebrow-bar" />
           THE PROGRAMME
         </div>
         <h2 style={{ ...tiersHeadline, ...reveal(1) }}>Three levels. One clear path.</h2>
@@ -149,7 +151,7 @@ const tiersHeadline: React.CSSProperties = {
   fontWeight: 700,
   color: 'var(--white)',
   lineHeight: 1.1,
-  marginBottom: 48,
+  marginBottom: 32,
 };
 
 const cardsRow: React.CSSProperties = {
@@ -201,9 +203,10 @@ function WaitlistForm() {
   };
 
   return (
-    <SectionWrapper bg="cream">
+    <SectionWrapper bg="cream" padding="0">
       <div ref={ref} style={formSection}>
-        <div className="eyebrow eyebrow-light" style={{ textAlign: 'center', display: 'block', ...reveal(0) }}>
+        <div className="eyebrow eyebrow-light eyebrow-center" style={{ ...reveal(0) }}>
+          <span className="eyebrow-bar" />
           JOIN THE WAITLIST
         </div>
         <h2 style={{ ...formHeadline, ...reveal(1) }}>
@@ -281,7 +284,7 @@ const formHeadline: React.CSSProperties = {
   fontWeight: 700,
   color: 'var(--text-primary-light)',
   lineHeight: 1.1,
-  marginBottom: 40,
+  marginBottom: 24,
 };
 
 const formCard: React.CSSProperties = {

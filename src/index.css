@@ -91,6 +91,25 @@ h1, h2, h3 {
   color: var(--orange);
 }
 
+.eyebrow-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.eyebrow-center::before {
+  display: none;
+}
+
+.eyebrow-center .eyebrow-bar {
+  width: 2px;
+  height: 16px;
+  background: var(--orange);
+  flex-shrink: 0;
+  display: block;
+}
+
 .btn-secondary {
   background: transparent;
   color: inherit;
