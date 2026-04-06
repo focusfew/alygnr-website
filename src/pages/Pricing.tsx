@@ -511,7 +511,7 @@ function SectionGroup({ section, feaCol }: { section: Section; feaCol: number })
               ...(type === 'check'
                 ? { color: '#4ADE80', fontSize: 14 }
                 : type === 'dash'
-                  ? { color: '#4E545F', fontSize: 13 }
+                  ? { color: '#6B7280', fontSize: 13 }
                   : {
                       color:
                         row.label === 'Strategy Configuration Call' && i > 0
@@ -613,7 +613,7 @@ const badgePop: React.CSSProperties = {
 };
 
 const featCol: React.CSSProperties = {
-  color: '#8A8F9A',
+  color: '#C8C6BE',
   fontSize: 13,
   minWidth: 200,
 };
@@ -623,7 +623,7 @@ const secRowTd: React.CSSProperties = {
   fontSize: 10,
   letterSpacing: '0.09em',
   textTransform: 'uppercase',
-  color: '#4E545F',
+  color: '#7A8090',
   fontWeight: 500,
   padding: '7px 14px',
   border: '1px solid rgba(255,255,255,0.07)',

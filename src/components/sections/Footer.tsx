@@ -22,6 +22,7 @@ export default function Footer() {
             <Link to="/platform" style={navLink}>How it works</Link>
             <Link to="/certification" style={navLink}>Certification</Link>
             <Link to="/faq" style={navLink}>FAQ</Link>
+            <Link to="/glossary" style={navLink}>Glossary</Link>
           </div>
           <div>
             <p style={colHeader}>ALYGNR for</p>

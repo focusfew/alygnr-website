@@ -31,6 +31,7 @@ import Privacy from './pages/Privacy.tsx'
 import Terms from './pages/Terms.tsx'
 import Certification from './pages/Certification.tsx'
 import FAQ from './pages/FAQ.tsx'
+import Glossary from './pages/Glossary.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -52,6 +53,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/terms" element={<Terms />} />
         <Route path="/certification" element={<Certification />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/glossary" element={<Glossary />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
