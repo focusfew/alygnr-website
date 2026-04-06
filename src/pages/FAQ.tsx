@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/ui/SEO';
 import PageWrapper from '../components/layout/PageWrapper';
@@ -164,6 +165,21 @@ export default function FAQ() {
           <p style={{ ...intro, ...reveal(2) }}>
             About ALYGNR, GTM strategy, marketing alignment, and AI in marketing.
           </p>
+
+          <Link
+            to="/glossary"
+            style={{
+              display: 'block',
+              marginBottom: 40,
+              fontSize: 14,
+              color: 'var(--orange)',
+              textDecoration: 'none',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+          >
+            New to these terms? See our Glossary →
+          </Link>
 
           {groups.map((group) => (
             <div key={group.title} style={reveal(3)}>
