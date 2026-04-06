@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import SectionWrapper from '../../layout/SectionWrapper';
 import CTAButton from '../../ui/CTAButton';
@@ -31,6 +32,10 @@ export default function PlatformCTA() {
         <p style={{ ...footnote, ...reveal(3) }}>
           No commitment. We'll reach out to schedule a walkthrough.
         </p>
+
+        <Link to="/certification" className="platform-cert-link" style={{ ...certLink, ...reveal(4) }}>
+          Built for teams who want to go deep →
+        </Link>
       </div>
 
       <style>{`
@@ -41,6 +46,9 @@ export default function PlatformCTA() {
         }
         .platform-cta-headline {
           font-size: clamp(36px, 4.5vw, 52px);
+        }
+        .platform-cert-link:hover {
+          color: var(--white) !important;
         }
       `}</style>
     </SectionWrapper>
@@ -78,4 +86,14 @@ const footnote: React.CSSProperties = {
   fontSize: 13,
   color: 'var(--text-muted-dark)',
   margin: '20px 0 0',
+};
+
+const certLink: React.CSSProperties = {
+  fontFamily: 'var(--font-base)',
+  fontSize: 15,
+  color: 'var(--text-secondary-dark)',
+  textDecoration: 'none',
+  marginBottom: 32,
+  marginTop: 24,
+  transition: 'color 180ms',
 };
