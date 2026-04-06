@@ -165,7 +165,7 @@ export default function FAQ() {
             About ALYGNR, GTM strategy, marketing alignment, and AI in marketing.
           </p>
 
-          {groups.map((group, gi) => (
+          {groups.map((group) => (
             <div key={group.title} style={reveal(3)}>
               <h2 style={groupHeading}>{group.title}</h2>
               {group.items.map((qa, qi) => {
