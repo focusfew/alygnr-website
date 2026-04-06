@@ -2,6 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
+import { initAnalytics } from './lib/analytics'
+import AnalyticsTracker from './components/AnalyticsTracker'
+
+initAnalytics()
 import App from './App.tsx'
 import Platform from './pages/Platform.tsx'
 import Founders from './pages/Founders.tsx'
@@ -16,6 +20,7 @@ import Terms from './pages/Terms.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <AnalyticsTracker />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/platform" element={<Platform />} />
