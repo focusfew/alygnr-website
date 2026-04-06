@@ -22,13 +22,13 @@ function Hero() {
             Become the person who makes GTM work.
           </h1>
           <p style={{ ...heroSubhead, ...reveal(2) }}>
-            For mid-level marketers who want to go from executing tasks to owning strategy.
+            For B2B marketers who execute well and want to own the strategy too.
           </p>
         </div>
 
         <style>{`
           .cert-hero-headline {
-            font-size: clamp(36px, 5vw, 56px);
+            font-size: clamp(28px, 4vw, 44px);
           }
         `}</style>
       </div>
@@ -41,7 +41,7 @@ const heroOuter: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingTop: 80,
+  paddingTop: 40,
   paddingBottom: 80,
 };
 
@@ -140,7 +140,7 @@ const tiersWrapper: React.CSSProperties = {
   maxWidth: 1080,
   margin: '0 auto',
   textAlign: 'center',
-  padding: '80px 24px',
+  padding: '56px 24px',
 };
 
 const tiersHeadline: React.CSSProperties = {
@@ -218,7 +218,7 @@ function WaitlistForm() {
           <div style={{ ...formCard, ...reveal(2) }}>
             {(['name', 'email', 'company', 'job_title'] as const).map((field) => {
               const labels: Record<string, string> = {
-                name: 'First Name',
+                name: 'Name',
                 email: 'Work Email',
                 company: 'Company',
                 job_title: 'Job Title',
@@ -272,7 +272,7 @@ const formSection: React.CSSProperties = {
   maxWidth: 800,
   margin: '0 auto',
   textAlign: 'center',
-  padding: '80px 24px',
+  padding: '56px 24px',
 };
 
 const formHeadline: React.CSSProperties = {
