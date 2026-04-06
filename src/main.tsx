@@ -3,10 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
-import { initAnalytics } from './lib/analytics'
+import { initAnalytics, initGA4ConsentMode, handleConsentAccepted } from './lib/analytics'
 import AnalyticsTracker from './components/AnalyticsTracker'
+import CookieConsent from './components/ui/CookieConsent'
 
 initAnalytics()
+initGA4ConsentMode()
+
+window.addEventListener('cookie_consent_accepted', handleConsentAccepted)
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +38,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <ScrollToTop />
       <AnalyticsTracker />
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/platform" element={<Platform />} />
