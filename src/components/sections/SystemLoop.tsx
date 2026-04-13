@@ -32,21 +32,6 @@ export default function SystemLoop() {
             Every layer connected.
           </div>
 
-          {/* body lines */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 6,
-            marginBottom: 32,
-          }}>
-            <p style={bodyLine}>Strategic Intent drives the Blueprint.</p>
-            <p style={bodyLine}>The Blueprint generates GTM Plays.</p>
-            <p style={bodyLine}>Plays produce Assets.</p>
-            <p style={bodyLine}>Assets generate performance data.</p>
-            <p style={bodyLine}>Data produces Insights.</p>
-            <p style={bodyLine}>Insights improve the next Intent.</p>
-          </div>
-
           {/* payoff line 1 */}
           <div style={{
             fontSize: 17,
@@ -99,10 +84,3 @@ export default function SystemLoop() {
     </section>
   );
 }
-
-const bodyLine: React.CSSProperties = {
-  fontSize: 16,
-  color: 'var(--text-secondary-light)',
-  lineHeight: 1.6,
-  margin: 0,
-};
