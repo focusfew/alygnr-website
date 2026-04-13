@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import loopVertical from '../../assets/loop-vertical2.png';
 
 export default function SystemLoop() {
@@ -34,8 +35,8 @@ export default function SystemLoop() {
 
           {/* payoff line 1 */}
           <div style={{
-            fontSize: 17,
-            fontWeight: 700,
+            fontSize: 22,
+            fontWeight: 600,
             color: 'var(--text-primary-light)',
             lineHeight: 1.4,
             marginBottom: 6,
@@ -45,13 +46,25 @@ export default function SystemLoop() {
 
           {/* payoff line 2 */}
           <div style={{
-            fontSize: 17,
-            fontWeight: 700,
+            fontSize: 22,
+            fontWeight: 600,
             color: 'var(--text-primary-light)',
             lineHeight: 1.4,
           }}>
             Everything compounds.
           </div>
+
+          <Link to="/platform" style={{
+            display: 'inline-block',
+            marginTop: 24,
+            fontSize: 14,
+            color: 'var(--text-secondary-light)',
+            textDecoration: 'none',
+            borderBottom: '1px solid rgba(0,0,0,0.2)',
+            paddingBottom: 2,
+          }}>
+            How the system works in detail →
+          </Link>
         </div>
 
         {/* ── right column ── */}
