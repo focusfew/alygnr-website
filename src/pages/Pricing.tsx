@@ -276,7 +276,7 @@ const agencyFeaturesRight = [
 /* ───────── helpers ───────── */
 
 function openModal() {
-  window.dispatchEvent(new CustomEvent('open-request-modal'));
+  window.location.href = '/request-access';
 }
 
 function InfoTooltip({ text }: { text: string }) {

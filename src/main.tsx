@@ -32,6 +32,7 @@ import Terms from './pages/Terms.tsx'
 import Certification from './pages/Certification.tsx'
 import FAQ from './pages/FAQ.tsx'
 import Glossary from './pages/Glossary.tsx'
+import RequestAccess from './pages/RequestAccess.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -54,6 +55,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/certification" element={<Certification />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/glossary" element={<Glossary />} />
+        <Route path="/request-access" element={<RequestAccess />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>

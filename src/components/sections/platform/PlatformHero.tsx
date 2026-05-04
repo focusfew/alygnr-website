@@ -28,7 +28,7 @@ export default function PlatformHero() {
 
         {/* CTAs */}
         <div className="platform-hero-ctas" style={{ ...ctaRow, ...reveal(3) }}>
-          <CTAButton href="#request" label="Request early access →" variant="primary" className="platform-cta-primary" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }} />
+          <CTAButton href="/request-access" label="Request early access →" variant="primary" className="platform-cta-primary" />
           <CTAButton href="#how-it-works" label="How it works" variant="secondary" className="platform-cta-secondary" />
         </div>
       </div>

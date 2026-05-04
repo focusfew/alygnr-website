@@ -23,7 +23,7 @@ export default function FoundersHero() {
           </p>
 
           <div style={reveal(3)}>
-            <CTAButton href="#request" label="Get early access →" variant="primary" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }} />
+            <CTAButton href="/request-access" label="Get early access →" variant="primary" />
           </div>
         </div>
 

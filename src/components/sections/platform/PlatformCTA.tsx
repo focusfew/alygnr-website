@@ -21,11 +21,10 @@ export default function PlatformCTA() {
 
         <div style={reveal(2)}>
           <CTAButton
-            href="#request"
+            href="/request-access"
             label="Request early access →"
             variant="primary"
             className="platform-cta-btn"
-            onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-request-modal')); }}
           />
         </div>
 
