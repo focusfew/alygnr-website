@@ -33,8 +33,7 @@ export default function Footer() {
           </div>
           <div>
             <p style={colHeader}>Company</p>
-            <a href="#about" style={navLink}>About</a>
-            <a href="#contact" style={navLink}>Contact</a>
+            <Link to="/company" style={navLink}>Company</Link>
           </div>
           <div>
             <p style={colHeader}>Legal</p>
