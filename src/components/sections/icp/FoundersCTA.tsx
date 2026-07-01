@@ -18,7 +18,7 @@ export default function FoundersCTA() {
         </p>
 
         <div style={reveal(2)}>
-          <CTAButton href="/request-access" label="Get early access →" variant="primary" />
+          <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" />
         </div>
 
         <p style={{ ...footnote, ...reveal(3) }}>

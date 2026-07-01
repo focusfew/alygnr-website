@@ -21,8 +21,8 @@ export default function PlatformCTA() {
 
         <div style={reveal(2)}>
           <CTAButton
-            href="/request-access"
-            label="Request early access →"
+            href="https://app.alygnr.ai"
+            label="Try it yourself →"
             variant="primary"
             className="platform-cta-btn"
           />

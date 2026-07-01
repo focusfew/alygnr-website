@@ -245,8 +245,8 @@ export default function Nav({ activePage }: NavProps) {
         </div>
 
         {/* ── desktop CTA ── */}
-        <a href="/request-access" style={ctaStyle} className="nav-desktop nav-cta">
-          Request early access
+        <a href="https://app.alygnr.ai" style={ctaStyle} className="nav-desktop nav-cta">
+          Try it yourself
         </a>
 
         {/* ── mobile hamburger ── */}
@@ -364,11 +364,11 @@ export default function Nav({ activePage }: NavProps) {
 
         <div style={{ marginTop: 'auto', paddingBottom: 32 }}>
           <a
-            href="/request-access"
+            href="https://app.alygnr.ai"
             onClick={() => setMobileOpen(false)}
             style={{ ...ctaStyle, display: 'block', textAlign: 'center' as const }}
           >
-            Request early access
+            Try it yourself
           </a>
         </div>
       </div>

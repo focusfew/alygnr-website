@@ -23,7 +23,7 @@ export default function FoundersHero() {
           </p>
 
           <div style={reveal(3)}>
-            <CTAButton href="/request-access" label="Get early access →" variant="primary" />
+            <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" />
           </div>
         </div>
 
