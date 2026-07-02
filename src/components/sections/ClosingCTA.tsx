@@ -19,7 +19,7 @@ export default function ClosingCTA() {
         </p>
 
         <div style={{ ...ctaRow, ...reveal(2) }} className="ccta-ctas">
-          <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" className="ccta-primary" />
+          <CTAButton href="https://app.alygnr.ai" label="Get started" variant="primary" className="ccta-primary" />
           <CTAButton href="/platform" label="See how it works" variant="secondary" className="ccta-secondary" />
         </div>
       </div>

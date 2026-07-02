@@ -18,7 +18,7 @@ export default function ScalingTeamsCTA() {
         </p>
 
         <div style={reveal(2)}>
-          <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" />
+          <CTAButton href="https://app.alygnr.ai" label="Get started" variant="primary" />
         </div>
 
         <p style={{ ...footnote, ...reveal(3) }}>

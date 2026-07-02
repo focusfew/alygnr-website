@@ -246,7 +246,7 @@ export default function Nav({ activePage }: NavProps) {
 
         {/* ── desktop CTA ── */}
         <a href="https://app.alygnr.ai" style={ctaStyle} className="nav-desktop nav-cta">
-          Try it yourself
+          Get started
         </a>
 
         {/* ── mobile hamburger ── */}
@@ -368,7 +368,7 @@ export default function Nav({ activePage }: NavProps) {
             onClick={() => setMobileOpen(false)}
             style={{ ...ctaStyle, display: 'block', textAlign: 'center' as const }}
           >
-            Try it yourself
+            Get started
           </a>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function PlatformHero() {
 
         {/* CTAs */}
         <div className="platform-hero-ctas" style={{ ...ctaRow, ...reveal(3) }}>
-          <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" className="platform-cta-primary" />
+          <CTAButton href="https://app.alygnr.ai" label="Get started" variant="primary" className="platform-cta-primary" />
           <CTAButton href="#how-it-works" label="How it works" variant="secondary" className="platform-cta-secondary" />
         </div>
       </div>

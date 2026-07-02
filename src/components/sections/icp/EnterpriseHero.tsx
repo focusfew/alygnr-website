@@ -24,7 +24,7 @@ export default function EnterpriseHero() {
           </p>
 
           <div style={reveal(3)}>
-            <CTAButton href="https://app.alygnr.ai" label="Try it yourself →" variant="primary" />
+            <CTAButton href="https://app.alygnr.ai" label="Get started" variant="primary" />
           </div>
         </div>
 

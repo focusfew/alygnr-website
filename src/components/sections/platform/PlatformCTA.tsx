@@ -22,7 +22,7 @@ export default function PlatformCTA() {
         <div style={reveal(2)}>
           <CTAButton
             href="https://app.alygnr.ai"
-            label="Try it yourself →"
+            label="Get started"
             variant="primary"
             className="platform-cta-btn"
           />
