@@ -1,0 +1,59 @@
+# ALYGNR
+
+> The GTM Intelligence Operating System for B2B marketing teams.
+
+Most B2B marketing teams have a strategy. Almost none of them can execute it consistently. The gap between the strategy deck and the campaign that ships — that is the problem ALYGNR was built to close.
+
+ALYGNR is the orchestration layer between strategic intent and execution. It is not a content tool, a campaign manager, an AI writing assistant, or a dashboard. It is the system that makes sure every campaign a team runs is connected to the strategy that team actually has.
+
+## The problem it solves
+
+B2B marketing breaks in a specific place: between the strategy meeting and the first campaign asset. Positioning gets defined, then ignored. Messaging gets documented, then forgotten. Every campaign starts from scratch because there is no system that carries the strategy forward into execution. The result is drift — campaigns that sound right individually but tell no coherent story collectively.
+
+ALYGNR is what that structural gap looks like when it is finally closed.
+
+## How it works
+
+ALYGNR operates as a five-layer system:
+
+**Foundation** — The strategic layer every campaign inherits from. ALYGNR extracts and stores a company's positioning, ICP definitions, buyer roles, value pillars, and messaging rules. Built once. Referenced by everything.
+
+**Campaign Brief** — A one-sentence business intent becomes a fully structured campaign brief in seconds. Audience, objective, channel logic, messaging angle, and asset plan — derived from the Foundation, not invented from scratch.
+
+**GTM Plays** — Coordinated sets of campaign assets generated from the brief. Each asset inherits positioning and tone from the Foundation. Every deliverable sounds like it came from the same strategic mind.
+
+**Calendar** — Time-distributed execution across all campaigns. Every asset, every deadline, every team member — in one view. No status meetings. No wondering what ships next.
+
+**Market Signals** — Real-time intelligence contextualised to the active campaign. Competitor moves, category shifts, what buyers are responding to — surfaced as action-headed insight cards, mapped to the campaign brief that is live right now.
+
+## Who uses it
+
+**VP and Head of Marketing at mid-market B2B SaaS companies** — small teams under pipeline pressure, responsible for strategy and execution simultaneously, no room for campaigns that drift from the plan.
+
+**B2B marketing agency operators** — managing multiple client workspaces, each with its own Foundation, positioning, and active campaigns. ALYGNR eliminates the context-switching tax of moving between clients.
+
+**Founder-led teams** — running GTM without a full marketing function, using ALYGNR to operate with the strategic coherence of a seasoned team.
+
+## What makes it different
+
+ALYGNR is built on nearly 20 years of B2B go-to-market consulting. The system codifies what experienced GTM practitioners do — the structural thinking, the discipline of connecting strategy to execution — and makes it available to every team, on every campaign, every time.
+
+Intelligence depth — not features — is the differentiator. Every tier ships the complete ALYGNR loop. The system gets smarter about your market, your positioning, and what works as it compounds over time.
+
+## Company
+
+Built by FocusFew, a B2B GTM strategy consultancy with nearly 20 years of experience helping companies define, position, and execute go-to-market programs that win.
+
+Website: https://alygnr.ai
+Product: https://app.alygnr.ai
+Contact: support@alygnr.ai
+
+## Pages
+
+- Homepage: https://alygnr.ai
+- Product overview: https://alygnr.ai/product
+- Pricing: https://alygnr.ai/pricing
+- Company: https://alygnr.ai/company
+- For scaling GTM teams: https://alygnr.ai/for/scaling-gtm-teams
+- For agencies: https://alygnr.ai/for/agencies
+- Contact: https://alygnr.ai/contact
