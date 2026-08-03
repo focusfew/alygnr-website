@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const APP_URL = 'https://app.alygnr.ai';
+const LOGIN_URL = 'https://app.alygnr.ai/auth/login';
 
 const forItems = [
   { label: 'Scaling GTM teams', href: '/for/scaling-gtm-teams' },
@@ -126,14 +127,14 @@ export default function Navbar() {
         {/* RIGHT — desktop actions */}
         <div className="hidden items-center gap-6 lg:flex">
           <a
-            href={APP_URL}
+            href={LOGIN_URL}
             className="text-[15px] font-normal text-[#B4B4B4] transition-colors duration-150 hover:text-white"
           >
             Log in
           </a>
           <a
             href={APP_URL}
-            className="rounded-[8px] border-[1.5px] border-white px-5 py-2 text-[15px] font-normal text-white transition-colors duration-150 hover:border-[#EC6427] hover:text-[#EC6427]"
+            className="rounded-[8px] border-[1.5px] border-white px-4 py-1.5 text-[14px] font-normal text-white transition-colors duration-150 hover:border-[#EC6427]"
           >
             Try it
           </a>
@@ -237,14 +238,14 @@ export default function Navbar() {
 
         <div className="mt-16 flex flex-col items-center gap-6 px-6">
           <a
-            href={APP_URL}
+            href={LOGIN_URL}
             className="text-xl text-[#B4B4B4] transition-colors duration-150 hover:text-white"
           >
             Log in
           </a>
           <a
             href={APP_URL}
-            className="rounded-[8px] border-[1.5px] border-white px-6 py-3 text-xl text-white transition-colors duration-150 hover:border-[#EC6427] hover:text-[#EC6427]"
+            className="rounded-[8px] border-[1.5px] border-white px-6 py-3 text-xl text-white transition-colors duration-150 hover:border-[#EC6427]"
           >
             Try it
           </a>
