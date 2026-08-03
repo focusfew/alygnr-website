@@ -15,24 +15,26 @@
   --foreground: #FFFFFF;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-html {
-  background-color: #13171D;
-  color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  html {
+    background-color: #13171D;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  background-color: #13171D;
-  color: #FFFFFF;
-  min-height: 100vh;
-  letter-spacing: -0.025em;
+  body {
+    background-color: #13171D;
+    color: #FFFFFF;
+    min-height: 100vh;
+    letter-spacing: -0.025em;
+  }
 }
 
 .gradient-text {
