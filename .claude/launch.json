@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "alygnr-next",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "alygnr-next", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}
