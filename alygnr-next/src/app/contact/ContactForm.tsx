@@ -73,28 +73,18 @@ export default function ContactForm() {
   // Errors are only surfaced after the first submit attempt.
   const errors = attempted ? computeErrors() : {};
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setAttempted(true);
     if (Object.keys(computeErrors()).length > 0) return;
 
-    setStatus('submitting');
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          reason,
-          message: message.trim(),
-        }),
-      });
-      if (!res.ok) throw new Error('Request failed');
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
+    const subject = `Contact form: ${reason}`;
+    const body = `Name: ${name.trim()}\nEmail: ${email.trim()}\nReason: ${reason}\nMessage: ${message.trim()}`;
+    const mailtoUrl = `mailto:support@alygnr.ai?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoUrl);
+    setStatus('success');
   }
 
   return (
