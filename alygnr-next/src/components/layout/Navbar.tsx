@@ -19,6 +19,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [forOpen, setForOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -75,9 +76,27 @@ export default function Navbar() {
           </Link>
 
           {/* ALYGNR for — dropdown */}
-          <div className="group relative">
+          <div
+            className="group relative"
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                setIsDropdownOpen(false);
+              }
+            }}
+          >
             <button
               type="button"
+              aria-haspopup="true"
+              aria-expanded={isDropdownOpen}
+              onClick={() => setIsDropdownOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setIsDropdownOpen((v) => !v);
+                } else if (e.key === 'Escape') {
+                  setIsDropdownOpen(false);
+                }
+              }}
               className={`flex items-center gap-1 rounded-full px-4 py-1.5 text-[15px] transition-colors duration-150 ${
                 pathname.startsWith('/for/')
                   ? 'bg-white/[0.12] font-medium text-white'
@@ -99,7 +118,13 @@ export default function Navbar() {
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </button>
-            <div className="invisible absolute left-0 top-full translate-y-[-4px] pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+            <div
+              className={`absolute left-0 top-full pt-2 transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ${
+                isDropdownOpen
+                  ? 'visible translate-y-0 opacity-100'
+                  : 'invisible translate-y-[-4px] opacity-0'
+              }`}
+            >
               <div className="min-w-[200px] rounded-[12px] border border-white/[0.08] bg-[#23272F] p-2">
                 {forItems.map((item) => (
                   <Link

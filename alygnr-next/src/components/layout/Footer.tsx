@@ -24,9 +24,9 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="mb-4 text-[13px] font-normal uppercase tracking-[0.08em] text-[#B4B4B4]">
+      <p className="mb-4 text-[13px] font-normal uppercase tracking-[0.08em] text-[#B4B4B4]">
         {heading}
-      </h3>
+      </p>
       <ul className="flex flex-col gap-3">
         {links.map((link) => (
           <li key={link.href}>

@@ -162,7 +162,10 @@ export default function ContactForm() {
 
                 {/* Reason — custom dropdown */}
                 <div className="mb-5">
-                  <label className="mb-2 block text-[13px] font-medium text-[#B4B4B4]">
+                  <label
+                    id="reason-label"
+                    className="mb-2 block text-[13px] font-medium text-[#B4B4B4]"
+                  >
                     How can we help you?*
                   </label>
                   <div className="relative" ref={dropdownRef}>
@@ -171,6 +174,7 @@ export default function ContactForm() {
                       onClick={() => setDropdownOpen((o) => !o)}
                       aria-haspopup="listbox"
                       aria-expanded={dropdownOpen}
+                      aria-labelledby="reason-label"
                       className={`${inputBase} flex items-center justify-between text-left`}
                     >
                       <span className={reason ? 'text-white' : 'text-[#555]'}>

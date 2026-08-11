@@ -306,6 +306,7 @@ function ToggleSwitch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
         type="button"
         role="switch"
         aria-checked={on}
+        aria-label="Toggle annual billing"
         onClick={onToggle}
         className={`relative h-[22px] w-[40px] cursor-pointer rounded-full transition-colors duration-150 ${
           on ? 'bg-[#EC6427]' : 'bg-[#333]'

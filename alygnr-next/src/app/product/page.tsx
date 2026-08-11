@@ -25,12 +25,25 @@ const integrationLogos = [
   'google-analytics.svg',
   'make.svg',
   'pipedrive.svg',
-  'apollo.svg',
-  'brevo.svg',
+  'apollo.png',
+  'brevo.png',
   'slack.svg',
   'teams.svg',
-  'onedrive.svg',
+  'onedrive.png',
 ];
+
+const logoAlt: Record<string, string> = {
+  'apollo.png': 'Apollo',
+  'brevo.png': 'Brevo',
+  'google-analytics.svg': 'Google Analytics',
+  'hubspot.svg': 'HubSpot',
+  'linkedin.svg': 'LinkedIn',
+  'make.svg': 'Make',
+  'onedrive.png': 'Microsoft OneDrive',
+  'pipedrive.svg': 'Pipedrive',
+  'slack.svg': 'Slack',
+  'teams.svg': 'Microsoft Teams',
+};
 
 const iconItems = [
   { icon: 'icon-gtm-readiness.svg', caption: 'Know exactly how ready your GTM is to execute.' },
@@ -208,7 +221,7 @@ export default function ProductPage() {
               <img
                 key={logo}
                 src={`/assets/integration-logos/${logo}`}
-                alt=""
+                alt={logoAlt[logo] ?? ''}
                 className="h-14 w-14 object-contain"
               />
             ))}
