@@ -3,15 +3,10 @@ import Image from 'next/image';
 
 const productLinks = [
   { label: 'How it works', href: '/product' },
-  { label: 'Certification', href: '/certification' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Glossary', href: '/glossary' },
 ];
 
 const forLinks = [
-  { label: 'Founder-led teams', href: '/for/founder-led-teams' },
   { label: 'Scaling GTM teams', href: '/for/scaling-gtm-teams' },
-  { label: 'Enterprise GTM', href: '/for/enterprise-gtm' },
   { label: 'Agencies', href: '/for/agencies' },
 ];
 
