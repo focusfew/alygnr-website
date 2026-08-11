@@ -24,7 +24,18 @@ export default function Home() {
         />
         <div className="relative z-10 mx-auto flex max-w-[1280px] flex-col items-center pt-16 text-center">
           <h1 className="text-balance text-[40px] font-bold leading-[1.05] md:text-[56px] lg:text-[72px]">
-            Say hello to the<br />future of <span className="gradient-text">marketing</span>.
+            Beat AI slop with<br />a{' '}
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #EC6427 0%, #F5A623 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              business foundation
+            </span>
+            .
           </h1>
         </div>
       </section>
