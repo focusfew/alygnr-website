@@ -41,13 +41,21 @@ export default function CTABlock({ variant, heading, subheading }: CTABlockProps
             {subheading && (
               <p className="mt-4 max-w-[560px] text-[16px] text-[#13171D]/70">{subheading}</p>
             )}
-            <div className="mt-8 flex flex-col items-center gap-4">
+            <div className="mt-8 flex items-center justify-center gap-4">
               <a
                 href={APP_URL}
-                className="inline-flex items-center justify-center rounded-[8px] bg-[#13171D] px-4 py-1.5 text-[14px] text-white transition-colors duration-150 hover:bg-[#EC6427]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-[8px] bg-[#EC6427] px-7 py-3 text-[15px] font-medium text-white transition-colors duration-150 hover:bg-[#d4551f]"
+              >
+                Try ALYGNR
+              </a>
+              <Link
+                href="/product"
+                className="inline-flex items-center justify-center rounded-[8px] border-[1.5px] border-[#13171D]/30 bg-transparent px-7 py-3 text-[15px] font-medium text-[#13171D] transition-colors duration-150 hover:border-[#13171D]"
               >
                 How it works
-              </a>
+              </Link>
             </div>
           </div>
         </div>
