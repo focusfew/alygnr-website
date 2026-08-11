@@ -37,11 +37,23 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      {
+        url: '/favicon-light-180.svg',
+        type: 'image/svg+xml',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/favicon-dark-180.svg',
+        type: 'image/svg+xml',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/favicon-32.png',
+        type: 'image/png',
+        sizes: '32x32',
+      },
     ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180" },
-    ],
+    apple: '/apple-touch-icon.png',
   },
 };
 
@@ -52,18 +64,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link
-          rel="icon"
-          href="/favicon-dark.svg"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          rel="icon"
-          href="/favicon-light.svg"
-          media="(prefers-color-scheme: dark)"
-        />
-      </head>
       <body className="antialiased min-h-screen bg-[#13171D] text-white">
         <Navbar />
         <main>{children}</main>
