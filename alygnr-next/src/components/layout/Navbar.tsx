@@ -37,8 +37,12 @@ export default function Navbar() {
   const isActive = (href: string) =>
     pathname === href || (href !== '/' && pathname.startsWith(href));
 
-  const linkColor = (href: string) =>
-    isActive(href) ? 'text-white' : 'text-[#B4B4B4] hover:text-white';
+  const navPill = (href: string) =>
+    `rounded-full px-4 py-1.5 text-[15px] transition-colors duration-150 ${
+      isActive(href)
+        ? 'bg-white/[0.12] font-medium text-white'
+        : 'bg-transparent font-normal text-white/60 hover:bg-white/[0.06] hover:text-white'
+    }`;
 
   return (
     <header
@@ -63,16 +67,10 @@ export default function Navbar() {
 
         {/* CENTRE — desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
-          <Link
-            href="/product"
-            className={`text-[15px] font-normal transition-colors duration-150 ${linkColor('/product')}`}
-          >
+          <Link href="/product" className={navPill('/product')}>
             Product
           </Link>
-          <Link
-            href="/pricing"
-            className={`text-[15px] font-normal transition-colors duration-150 ${linkColor('/pricing')}`}
-          >
+          <Link href="/pricing" className={navPill('/pricing')}>
             Pricing
           </Link>
 
@@ -80,10 +78,10 @@ export default function Navbar() {
           <div className="group relative">
             <button
               type="button"
-              className={`flex items-center gap-1 text-[15px] font-normal transition-colors duration-150 ${
+              className={`flex items-center gap-1 rounded-full px-4 py-1.5 text-[15px] transition-colors duration-150 ${
                 pathname.startsWith('/for/')
-                  ? 'text-white'
-                  : 'text-[#B4B4B4] group-hover:text-white'
+                  ? 'bg-white/[0.12] font-medium text-white'
+                  : 'bg-transparent font-normal text-white/60 group-hover:bg-white/[0.06] group-hover:text-white'
               }`}
             >
               ALYGNR for
@@ -116,10 +114,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link
-            href="/company"
-            className={`text-[15px] font-normal transition-colors duration-150 ${linkColor('/company')}`}
-          >
+          <Link href="/company" className={navPill('/company')}>
             Company
           </Link>
         </div>
