@@ -427,7 +427,7 @@ export default function PricingContent() {
           <div className="mx-auto mt-12 grid max-w-[1080px] grid-cols-1 gap-6 md:grid-cols-3">
             {/* STUDIO */}
             <TierCard name="STUDIO" reserveBadge>
-              <PriceDisplay {...(aAnnual ? agenciesPrices.studio.annual : agenciesPrices.studio.monthly)} />
+              <PriceDisplay {...(aAnnual ? agenciesPrices.studio.annual : agenciesPrices.studio.monthly)} bigPrefix />
               <ToggleSwitch on={aAnnual} onToggle={() => setAgenciesBilling(aAnnual ? 'Monthly' : 'Annual')} />
               <Divider />
               <div className="flex-1">
@@ -440,7 +440,7 @@ export default function PricingContent() {
 
             {/* PRACTICE (featured) */}
             <TierCard name="PRACTICE" featured>
-              <PriceDisplay {...(aAnnual ? agenciesPrices.practice.annual : agenciesPrices.practice.monthly)} />
+              <PriceDisplay {...(aAnnual ? agenciesPrices.practice.annual : agenciesPrices.practice.monthly)} bigPrefix />
               <ToggleSwitch on={aAnnual} onToggle={() => setAgenciesBilling(aAnnual ? 'Monthly' : 'Annual')} />
               <Divider />
               <div className="flex-1">
@@ -453,7 +453,7 @@ export default function PricingContent() {
 
             {/* NETWORK */}
             <TierCard name="NETWORK" reserveBadge>
-              <PriceDisplay {...(aAnnual ? agenciesPrices.network.annual : agenciesPrices.network.monthly)} />
+              <PriceDisplay {...(aAnnual ? agenciesPrices.network.annual : agenciesPrices.network.monthly)} bigPrefix />
               <ToggleSwitch on={aAnnual} onToggle={() => setAgenciesBilling(aAnnual ? 'Monthly' : 'Annual')} />
               <Divider />
               <div className="flex-1">
