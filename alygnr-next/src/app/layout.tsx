@@ -65,6 +65,38 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="antialiased min-h-screen bg-[#13171D] text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://alygnr.ai/#organization",
+                  "name": "ALYGNR",
+                  "url": "https://alygnr.ai",
+                  "logo": "https://alygnr.ai/favicon-dark-180.svg",
+                  "sameAs": ["https://www.linkedin.com/company/alygnr"],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "support@alygnr.ai",
+                    "contactType": "customer support",
+                  },
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://alygnr.ai/#website",
+                  "url": "https://alygnr.ai",
+                  "name": "ALYGNR",
+                  "publisher": {
+                    "@id": "https://alygnr.ai/#organization",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />
