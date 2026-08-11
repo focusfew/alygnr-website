@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: 'Product — ALYGNR',
   description:
     'See how ALYGNR turns a single sentence into a complete campaign strategy. Foundation, campaign brief, market intelligence, and calendar — in one system.',
+  openGraph: {
+    title: 'Product — ALYGNR',
+    description:
+      'See how ALYGNR turns a single sentence into a complete campaign strategy. Foundation, campaign brief, market intelligence, and calendar — in one system.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Product — ALYGNR',
+    description:
+      'See how ALYGNR turns a single sentence into a complete campaign strategy. Foundation, campaign brief, market intelligence, and calendar — in one system.',
+  },
 };
 
 const integrationLogos = [

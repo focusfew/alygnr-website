@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: 'Contact — ALYGNR',
   description:
     "Get in touch with the ALYGNR team. Whether you have a question, want a demo, or need help — we're here.",
+  openGraph: {
+    title: 'Contact — ALYGNR',
+    description:
+      "Get in touch with the ALYGNR team. Whether you have a question, want a demo, or need help — we're here.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact — ALYGNR',
+    description:
+      "Get in touch with the ALYGNR team. Whether you have a question, want a demo, or need help — we're here.",
+  },
 };
 
 export default function ContactPage() {

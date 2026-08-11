@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'Company — ALYGNR',
   description:
     "ALYGNR is built on 20+ years of B2B go-to-market work. Great marketing strategy shouldn't stay in docs.",
+  openGraph: {
+    title: 'Company — ALYGNR',
+    description:
+      "ALYGNR is built on 20+ years of B2B go-to-market work. Great marketing strategy shouldn't stay in docs.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Company — ALYGNR',
+    description:
+      "ALYGNR is built on 20+ years of B2B go-to-market work. Great marketing strategy shouldn't stay in docs.",
+  },
 };
 
 const truths = [

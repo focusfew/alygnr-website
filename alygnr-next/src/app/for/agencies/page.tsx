@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'For Agencies — ALYGNR',
   description:
     'ALYGNR gives B2B marketing agencies a complete strategic foundation for every client. Less guessing. More knowing. Better work.',
+  openGraph: {
+    title: 'For Agencies — ALYGNR',
+    description:
+      'ALYGNR gives B2B marketing agencies a complete strategic foundation for every client. Less guessing. More knowing. Better work.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'For Agencies — ALYGNR',
+    description:
+      'ALYGNR gives B2B marketing agencies a complete strategic foundation for every client. Less guessing. More knowing. Better work.',
+  },
 };
 
 export default function AgenciesPage() {

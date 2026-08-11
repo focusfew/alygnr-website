@@ -3,6 +3,16 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Page not found — ALYGNR',
+  description: "The page you're looking for doesn't exist. Head back to ALYGNR.",
+  openGraph: {
+    title: 'Page not found — ALYGNR',
+    description: "The page you're looking for doesn't exist. Head back to ALYGNR.",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Page not found — ALYGNR',
+    description: "The page you're looking for doesn't exist. Head back to ALYGNR.",
+  },
 };
 
 export default function NotFound() {
