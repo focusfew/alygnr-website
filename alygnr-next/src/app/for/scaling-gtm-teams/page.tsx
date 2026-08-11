@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: 'For Scaling GTM Teams — ALYGNR',
   description:
     'ALYGNR helps scaling B2B marketing teams run more campaigns with the same team. No campaign left behind. GTM that compounds.',
+  openGraph: {
+    title: 'For Scaling GTM Teams — ALYGNR',
+    description:
+      'ALYGNR helps scaling B2B marketing teams run more campaigns with the same team. No campaign left behind. GTM that compounds.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'For Scaling GTM Teams — ALYGNR',
+    description:
+      'ALYGNR helps scaling B2B marketing teams run more campaigns with the same team. No campaign left behind. GTM that compounds.',
+  },
 };
 
 export default function ScalingGtmTeamsPage() {
