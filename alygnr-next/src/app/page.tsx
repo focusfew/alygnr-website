@@ -10,7 +10,7 @@ export default function Home() {
         className="relative flex items-center justify-center px-6 md:px-12"
         style={{
           minHeight: '100vh',
-          backgroundImage: "url('/images/hero-homepage.jpg')",
+          backgroundImage: "url('/assets/hero-images/hero-homepage.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -81,7 +81,7 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-[1080px] overflow-hidden rounded-[16px]">
             <Image
-              src="/images/campaigns-list-1.png"
+              src="/assets/product-screenshots/campaigns-list-1.png"
               alt="ALYGNR campaigns list"
               width={4490}
               height={3175}
@@ -100,7 +100,7 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-[1080px] overflow-hidden rounded-[16px] md:mx-0">
             <Image
-              src="/images/gtm-health.png"
+              src="/assets/product-screenshots/gtm-health.png"
               alt="ALYGNR GTM health"
               width={4490}
               height={3175}
