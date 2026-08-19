@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Analytics from "@/components/analytics/Analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -100,6 +102,9 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );

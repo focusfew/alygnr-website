@@ -27,7 +27,7 @@ const sections: Section[] = [
     id: 'third-parties',
     label: 'Third parties',
     heading: 'Third parties',
-    body: "We use Anthropic for AI generation, Postmark for email, and PostHog for analytics. Each receives only what they need to do their job. We don't sell your data to anyone.",
+    body: "We use Anthropic for AI generation, Postmark for email, and Google Analytics and Microsoft Clarity for analytics (only with your consent). Each receives only what they need to do their job. We don't sell your data to anyone.",
   },
   {
     id: 'your-data',
