@@ -256,25 +256,28 @@ const orgBullets = [
 const agenciesFeatures = {
   studio: [
     { label: 'Client Workspaces', value: '1–2' },
-    { label: 'Add-on client workspaces', value: '$59/workspace' },
+    { label: 'Campaigns / workspace', value: '2 active' },
+    { label: 'Assets / workspace', value: '10/day' },
     { label: 'Support and Access', value: 'Full platform access' },
     { label: 'L1 & L2 support', value: <CheckIcon /> },
   ],
   practice: [
     { label: 'Client Workspaces', value: '3–7' },
-    { label: 'Add-on client workspaces', value: '$59/workspace' },
+    { label: 'Campaigns / workspace', value: '5 active' },
+    { label: 'Assets / workspace', value: '50/day' },
     { label: 'Support and Access', value: 'Full platform access' },
     { label: 'L1 & L2 support', value: <CheckIcon /> },
   ],
   network: [
-    { label: 'Client Workspaces', value: '6–15' },
-    { label: 'Add-on client workspaces', value: '$59/workspace' },
+    { label: 'Client Workspaces', value: '8–20' },
+    { label: 'Campaigns / workspace', value: 'Unlimited' },
+    { label: 'Assets / workspace', value: 'Unlimited' },
     { label: 'Support and Access', value: 'Full platform access' },
     {
       label: 'L1 & L2 support',
       value: (
         <span className="inline-flex items-center gap-1">
-          <CheckIcon /> + Dedicated ALYGNR Veteran support
+          <CheckIcon /> + Dedicated success manager
         </span>
       ),
     },
@@ -414,10 +417,7 @@ export default function PricingContent() {
           </div>
 
           <p className="mx-auto mt-6 max-w-[680px] text-center text-[11px] text-[#555]">
-            * All plans include a 30-day free trial. No credit card required. † L1 &amp; L2 support
-            covers your entire team, including Foundation, Campaigns, GTM Calendar, Content Threads,
-            Quick Create, and Integrations. ‡ L1 &amp; L2 support includes Foundations, Campaigns, GTM
-            Calendar, Content Threads, Quick Create, and Integrations respectively.
+            * All plans include a 30-day free trial. No credit card required. L1 &amp; L2 support covers your entire team, including Foundation, Campaigns, GTM Calendar, Content Threads, Quick Create, and Integrations.
           </p>
         </section>
       )}
@@ -467,9 +467,7 @@ export default function PricingContent() {
           </div>
 
           <p className="mx-auto mt-6 max-w-[680px] text-center text-[11px] text-[#555]">
-            * All plans include a 30-day free trial. No credit card required. † Add-on client workspaces
-            include one Foundation, Campaigns, GTM Calendar, Content Threads, Quick Create, and
-            Integrations per client workspace.
+            * All plans include a 30-day free trial. No credit card required. Each client workspace includes Foundation, Campaigns, GTM Calendar, Content Threads, Quick Create, and Integrations.
           </p>
         </section>
       )}
