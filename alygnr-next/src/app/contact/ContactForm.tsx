@@ -73,19 +73,30 @@ export default function ContactForm() {
   // Errors are only surfaced after the first submit attempt.
   const errors = attempted ? computeErrors() : {};
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setAttempted(true);
-    if (Object.keys(computeErrors()).length > 0) return;
+    const errors = computeErrors();
+    if (Object.keys(errors).length > 0) return;
 
-    const subject = `Contact form: ${reason}`;
-    const body = `Name: ${name.trim()}\nEmail: ${email.trim()}\nReason: ${reason}\nMessage: ${message.trim()}`;
-    const mailtoUrl = `mailto:support@alygnr.ai?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoUrl);
-    setStatus('success');
-  }
+    setStatus('submitting');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, reason, message }),
+      });
+
+      if (!res.ok) {
+        setStatus('error');
+        return;
+      }
+
+      setStatus('success');
+    } catch {
+      setStatus('error');
+    }
+  };
 
   return (
     <section className="px-6">
@@ -117,7 +128,13 @@ export default function ContactForm() {
                 Message sent. We&apos;ll be in touch shortly.
               </p>
             ) : (
-              <form onSubmit={handleSubmit} noValidate>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
+                noValidate
+              >
                 {/* Name */}
                 <div className="mb-5">
                   <label
